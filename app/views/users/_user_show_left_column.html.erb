@@ -4,7 +4,7 @@
 <br />
 <%= user_name_limit_characters(@user) %>
 <br />
-<%= link_to "Edit Profile", edit_user_path(current_user) if current_user.id.to_s == params[:id] %>
+<%= link_to "Edit Profile", edit_user_path(@user) if !current_user.nil? && current_user.id.to_s == params[:id] %>
 <br />
 <%= render 'shared/social_sites' %>
 <%= render 'shared/more_contact_info' %>
