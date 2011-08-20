@@ -1,9 +1,17 @@
 class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :username, :email, :password, :password_confirmation
+  attr_accessible :username, :email, :password, :password_confirmation, :fname, :lname, :band, :photo 
 
   attr_accessor :password
   before_save :prepare_password
+  
+  has_attached_file :photo, :styles => { :icon => "40x40#", :small => "150x150>" }, #:styles      => {:icon => "50x50#", :thumb=> "100x100#", :small  => "190x190#", :large => "500x500>" },
+    :url  => "/assets/user/:id/:style/:basename.:extension",
+    :path => ":rails_root/public/assets/user/:id/:style/:basename.:extension",
+    :default_url => "/assets/user/default/:style/default.jpg"
+
+  validates_attachment_size :photo, :less_than => 5.megabytes
+  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/pjpeg', 'image/x-png', 'image/jpg']
 
   validates_presence_of :username
   validates_uniqueness_of :username, :email, :allow_blank => true

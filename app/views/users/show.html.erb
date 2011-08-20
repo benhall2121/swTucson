@@ -1,0 +1,10 @@
+<div>
+<h1> User Show</h1>
+
+<%= link_to (image_tag @user.photo.url(:small), :class => 'profile'), @user.photo.url(:original) %><br/>
+First Name: <%= @user.fname %><br/>
+Last Name: <%= @user.lname %><br/>
+Band Name: <%= @user.band %>
+
+</div>
+

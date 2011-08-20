@@ -82,3 +82,527 @@ Started GET "/" for 127.0.0.1 at Fri Aug 19 10:06:48 -0700 2011
   Processing by SessionsController#new as HTML
 Rendered sessions/new.html.erb within layouts/application (21.9ms)
 Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 21:47:17 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 21:47:19 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Fri Aug 19 21:48:47 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (32.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 576ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 21:48:47 -0700 2011
+
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 21:51:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 46ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:11:05 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (186.6ms)
+Completed   in 224ms
+
+ActionView::Template::Error (undefined local variable or method `log_out' for #<#<Class:0x24f0d10>:0x24efe9c>):
+    1: <div>
+    2: <h1> User Show</h1>
+    3: <%= link_to "log out", log_out %>
+    4: </div>
+  app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___915231397_19363910_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:11:25 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (36.9ms)
+Completed   in 74ms
+
+ActionView::Template::Error (undefined local variable or method `logout' for #<#<Class:0x25d01f4>:0x25ceb88>):
+    1: <div>
+    2: <h1> User Show</h1>
+    3: <%= link_to "log out", logout %>
+    4: </div>
+  app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___915231397_19818000_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:12:14 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 47ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:14:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (45.2ms)
+Completed   in 83ms
+
+ActionView::Template::Error (undefined local variable or method `log_out_path' for #<#<Class:0x25f7e34>:0x25f67b4>):
+    9:   </head>
+    10:   <body>
+    11:     <% if current_user %>
+    12:         <%= link_to "Log out", log_out_path %><br />
+    13:         Welcome back <%= username(current_user) %>!
+    14:     <% else %>
+    15:         <%= link_to "Log In", login_path %>
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__883503433_19899060_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:14:30 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (46.8ms)
+Completed   in 162ms
+
+ActionView::Template::Error (undefined method `username' for #<#<Class:0x2740340>:0x273f38c>):
+    10:   <body>
+    11:     <% if current_user %>
+    12:         <%= link_to "Log out", logout_path %><br />
+    13:         Welcome back <%= username(current_user) %>!
+    14:     <% else %>
+    15:         <%= link_to "Log In", login_path %>
+    16:     <% end %>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__883503433_20571000_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:15:19 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 64ms (Views: 36.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Fri Aug 19 22:15:30 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 22:15:30 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 22:17:42 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 22:18:34 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 22:19:16 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Fri Aug 19 22:19:20 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Fri Aug 19 22:19:26 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 214ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:19:26 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 63ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (30.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110819165907)
+Migrating to AddColumnsToUsers (20110820052146)
+  [1m[35mSQL (444.0ms)[0m  ALTER TABLE `users` ADD `fname` varchar(255)
+  [1m[36mSQL (354.2ms)[0m  [1mALTER TABLE `users` ADD `lname` varchar(255)[0m
+  [1m[35mSQL (152.2ms)[0m  ALTER TABLE `users` ADD `band` varchar(255)
+  [1m[36mSQL (20.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110820052146')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (2.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110819165907)
+Migrating to AddColumnsToUsers (20110820052146)
+Migrating to AddAttachmentPhotoToUser (20110820052323)
+  [1m[35mSQL (115.4ms)[0m  ALTER TABLE `users` ADD `photo_file_name` varchar(255)
+  [1m[36mSQL (183.5ms)[0m  [1mALTER TABLE `users` ADD `photo_content_type` varchar(255)[0m
+  [1m[35mSQL (144.3ms)[0m  ALTER TABLE `users` ADD `photo_file_size` int(11)
+  [1m[36mSQL (143.5ms)[0m  [1mALTER TABLE `users` ADD `photo_updated_at` datetime[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110820052323')
+  [1m[36mSQL (3.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (3.0ms)[0m  describe `users`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:26:03 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (112.5ms)
+Completed 200 OK in 152ms (Views: 123.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:26:05 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (70.7ms)
+Rendered users/edit.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 144ms (Views: 115.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:27:55 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (48.1ms)
+Rendered users/edit.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 100ms (Views: 71.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:30:07 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (54.4ms)
+Rendered users/edit.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 178ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:30:24 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>"default_avatar.jpg", "band"=>"Skulls Of One", "lname"=>"Hall", "fname"=>"Ben"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (33.2ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: photo, band, lname, fname
+  [1m[36mSQL (73.1ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 323ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 22:30:25 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:32:03 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (142.3ms)
+Rendered users/edit.html.erb within layouts/application (156.2ms)
+Completed 200 OK in 202ms (Views: 167.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:32:13 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"band"=>"", "lname"=>"", "fname"=>"Ben Hall"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: band, lname, fname
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 90ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:32:13 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 82ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:33:29 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (121.8ms)
+Rendered users/edit.html.erb within layouts/application (134.9ms)
+Completed 200 OK in 181ms (Views: 147.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:33:42 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>"default_avatar.jpg", "band"=>"Skulls Of One", "lname"=>"Hall", "fname"=>"Ben"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mAREL (31.1ms)[0m  UPDATE `users` SET `updated_at` = '2011-08-20 05:33:43', `fname` = 'Ben', `lname` = 'Hall', `band` = 'Skulls Of One' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 150ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:33:43 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (141.1ms)
+Completed 200 OK in 187ms (Views: 150.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:35:09 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 163ms (Views: 54.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:35:12 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (62.9ms)
+Rendered users/edit.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 123ms (Views: 87.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:35:17 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>"default_avatar.jpg", "band"=>"Skulls Of One", "lname"=>"Hall", "fname"=>"Ben"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 180ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:35:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 83ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:35:52 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 151ms (Views: 116.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:35:55 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (130.6ms)
+Rendered users/edit.html.erb within layouts/application (144.3ms)
+Completed 200 OK in 189ms (Views: 154.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:36:01 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>"default_avatar.jpg", "band"=>"Skulls Of One", "lname"=>"Hall", "fname"=>"Ben"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 83ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:36:01 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (132.3ms)
+Completed 200 OK in 177ms (Views: 142.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:36:51 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (52.1ms)
+Rendered users/edit.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 111ms (Views: 76.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:36:57 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x2756b90 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"default_avatar.jpg\"\r\nContent-Type: image/jpeg\r\n", @content_type="image/jpeg", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110819-19897-1aoaztp-0>, @original_filename="default_avatar.jpg">, "band"=>"Skulls Of One", "lname"=>"Hall", "fname"=>"Ben"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `users` SET `photo_content_type` = 'image/jpeg', `photo_file_name` = 'default_avatar.jpg', `updated_at` = '2011-08-20 05:36:59', `photo_updated_at` = '2011-08-20 05:36:58', `photo_file_size` = 7728 WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/icon/default_avatar.jpg
+[paperclip] saving /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/small/default_avatar.jpg
+[paperclip] saving /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/original/default_avatar.jpg
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1395ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:36:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (122.8ms)
+Completed 200 OK in 171ms (Views: 133.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:40:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 91ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Fri Aug 19 22:42:17 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (124.5ms)
+Rendered users/edit.html.erb within layouts/application (138.3ms)
+Completed 200 OK in 184ms (Views: 151.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Fri Aug 19 22:42:38 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x25c9674 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0113.JPG\"\r\nContent-Type: image/jpeg\r\n", @content_type="image/jpeg", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110819-19897-1hza8qv-0>, @original_filename="IMG_0113.JPG">, "band"=>"Skulls Of One", "lname"=>"Hall", "fname"=>"Ben"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `photo_file_size` = 186151, `photo_updated_at` = '2011-08-20 05:42:39', `photo_file_name` = 'IMG_0113.JPG', `updated_at` = '2011-08-20 05:42:39' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/original/default_avatar.jpg
+[paperclip] deleting /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/icon/default_avatar.jpg
+[paperclip] deleting /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/small/default_avatar.jpg
+[paperclip] saving /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/icon/IMG_0113.JPG
+[paperclip] saving /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/small/IMG_0113.JPG
+[paperclip] saving /Users/Ben/Desktop/work/sidework/swTucson/public/assets/user/1/original/IMG_0113.JPG
+  [1m[36mSQL (88.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 457ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:42:39 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 86ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Fri Aug 19 22:43:31 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 86ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 19 22:47:38 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)

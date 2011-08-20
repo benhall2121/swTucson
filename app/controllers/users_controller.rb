@@ -22,9 +22,13 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice => "Your profile has been updated."
+      redirect_to(@user, :notice => 'User was successfully updated.') 
     else
       render :action => 'edit'
     end
+  end
+  
+  def show  
+    @user = User.find(params[:id])	  
   end
 end
