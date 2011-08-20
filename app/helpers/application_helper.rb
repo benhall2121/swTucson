@@ -59,4 +59,14 @@ module ApplicationHelper
     return link_u
   end
   
+  def website_Link(u)
+    if u.match(/http/)
+      link_u = u
+    else
+      link_u = "http://" + u
+    end	    
+    	    
+    return link_u
+  end
+  
 end

@@ -4,6 +4,6 @@
   <div><%= mail_to @user.email, 'Email me' %></div>
 <% end %>
 <% if !@user.web_site.blank? %>
-  <div><%= link_to 'Website', @user.web_site, :target => '_blank' %></div>
+  <div><%= link_to 'Website', website_Link(@user.web_site), :target => '_blank' %></div>
 <% end %>
 </div>
