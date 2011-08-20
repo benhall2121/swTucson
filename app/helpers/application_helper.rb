@@ -5,9 +5,17 @@ module ApplicationHelper
       name = u.artist_name + ' '
     end
     
-    if name == ''
-    	    name = u.name	
+    if name == '' && !u.name.nil? && !u.name.blank?
+      name = u.name	
     end
+    
+    if name == '' && !u.username.nil? && !u.username.blank?
+      name = u.username    
+    end
+    
+    if name.nil? && name.blank?
+      name = ''    
+    end 
     
     return name
   end
