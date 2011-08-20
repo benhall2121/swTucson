@@ -1,13 +1,13 @@
 <div class="social_networking_sites">
 
 <% if !@user.twitter.blank? %>
-  <div><%= link_to image_tag('twitter32.png'), twitter_link(@user.twitter), :target => '_blank'  %></div>
+  <div><%= link_to image_tag('Twitter32.png'), twitter_link(@user.twitter), :target => '_blank'  %></div>
 <% end %>
 <% if !@user.facebook.blank? %>
-  <div><%= link_to image_tag('facebook32.png'), facebook_link(@user.facebook), :target => '_blank'  %></div>
+  <div><%= link_to image_tag('Facebook32.png'), facebook_link(@user.facebook), :target => '_blank'  %></div>
 <% end %>
 <% if !@user.youTube.blank? %>
-  <div><%= link_to image_tag('Youtube32.png'), youTube_link(@user.youTube), :target => '_blank' %></div>
+  <div><%= link_to image_tag('YouTube32.png'), youTube_link(@user.youTube), :target => '_blank' %></div>
 <% end %>
 
 </div>
