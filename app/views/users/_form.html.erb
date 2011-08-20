@@ -25,16 +25,40 @@
     <%= f.file_field :photo %>
   </p>
   <p>
-    <%= f.label "First Name" %><br />
-    <%= f.text_field :fname %>
+    <%= f.label "Arts Type" %><br />
+    <%= f.text_field :arts_type %>
   </p>
   <p>
-    <%= f.label "Last Name" %><br />
-    <%= f.text_field :lname %>
+    <%= f.label "Individual or Group" %><br />
+    <%= f.select :ind_group, ['Individual', 'Group'] %>
   </p>
   <p>
-    <%= f.label "Band Name" %><br />
-    <%= f.text_field :band %>
+    <%= f.label "Name" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label "Artist Name" %><br />
+    <%= f.text_field :artist_name %>
+  </p>
+  <p>
+    <%= f.label "Bio" %><br />
+    <%= f.text_area :bio %>
+  </p>
+  <p>
+    <%= f.label "Website" %><br />
+    <%= f.text_field :web_site %>
+  </p>
+  <p>
+    <%= f.label "Facebook" %><br />
+    <%= f.text_field :facebook %>
+  </p>
+  <p>
+    <%= f.label "Twitter" %><br />
+    <%= f.text_field :twitter %>
+  </p>
+  <p>
+    <%= f.label "YouTube" %><br />
+    <%= f.text_field :youTube %>
   </p>
   
   <% end %>

@@ -77,3 +77,43 @@ a {
 .enter_div{
   text-align:right;	
 }
+
+
+
+img{
+ border:none;	
+}
+
+img.profile{
+ border: 1px solid #999;
+ padding:3px;
+ background-color:#eee;
+}
+
+img.profile:hover{
+ border: 1px solid #555;
+ padding:3px;
+}
+
+
+/******************************  Users Show  ******************************/
+.user_left_column{
+	width:155px;
+	display:inline-block;
+	text-align:center;
+	vertical-align: top;
+}
+
+.social_networking_sites div{
+  display:inline-block;
+  margin-right:5px;
+}
+
+.user_right_column{
+  display:inline-block;
+  vertical-align: top;
+  width:739px;	
+}
+
+
+/******************************  End Users Show  ******************************/

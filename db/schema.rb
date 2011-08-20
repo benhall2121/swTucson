@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110820052323) do
+ActiveRecord::Schema.define(:version => 20110820171641) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(:version => 20110820052323) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "arts_type"
+    t.string   "ind_group"
+    t.string   "name"
+    t.string   "artist_name"
+    t.text     "bio"
+    t.string   "web_site"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "youTube"
   end
 
 end
