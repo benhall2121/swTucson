@@ -1793,3 +1793,44 @@ Rendered shared/_more_contact_info.html.erb (1.7ms)
 Rendered users/_user_show_left_column.html.erb (105.1ms)
 Rendered users/show.html.erb within layouts/application (132.7ms)
 Completed 200 OK in 1854ms (Views: 144.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 13:19:49 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (25.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 512ms
+
+RQRCode::QRCodeRunTimeError (code length overflow. (300>288)):
+  app/controllers/users_controller.rb:39:in `new'
+  app/controllers/users_controller.rb:39:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (149.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (164.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 13:20:06 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered users/_user_show_left_column.html.erb (156.8ms)
+Rendered users/show.html.erb within layouts/application (202.6ms)
+Completed 200 OK in 4267ms (Views: 214.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 13:20:42 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.0ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (152.4ms)
+Rendered users/show.html.erb within layouts/application (197.5ms)
+Completed 200 OK in 4240ms (Views: 207.6ms | ActiveRecord: 0.4ms)
