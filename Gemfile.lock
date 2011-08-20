@@ -80,6 +80,7 @@ GEM
     rake (0.9.2)
     rest-client (1.6.3)
       mime-types (>= 1.16)
+    rqrcode (0.4.1)
     thor (0.14.6)
     treetop (1.4.10)
       polyglot
@@ -98,3 +99,4 @@ DEPENDENCIES
   paperclip
   rails (= 3.0.7)
   rest-client
+  rqrcode

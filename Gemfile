@@ -11,6 +11,7 @@ gem 'mongrel'
 gem 'rest-client'
 gem 'paperclip'
 gem "nifty-generators", :group => :development
+gem "rqrcode"
 
 # Use unicorn as the web server
 # gem 'unicorn'

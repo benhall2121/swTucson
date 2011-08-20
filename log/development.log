@@ -1334,3 +1334,276 @@ Rendered shared/_more_contact_info.html.erb (1.2ms)
 Rendered users/_user_show_left_column.html.erb (160.6ms)
 Rendered users/show.html.erb within layouts/application (173.4ms)
 Completed 200 OK in 222ms (Views: 184.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 11:55:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSQL (25.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (138.1ms)
+Rendered users/show.html.erb within layouts/application (152.5ms)
+Completed 200 OK in 324ms (Views: 166.2ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 11:56:35 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (128.8ms)
+Rendered users/show.html.erb within layouts/application (205.1ms)
+Completed   in 254ms
+
+ActionView::Template::Error (undefined method `qrcode' for #<#<Class:0x26278dc>:0x2625230>):
+    2: 
+    3: <div class="user_right_column">
+    4: QR Code<br />
+    5: <%= qrcode('http://www.yahoo.com/', 2, 8, 'my-qrcode') %>
+    6: <div id="my-qrcode">
+    7: 
+    8: </div>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__272278522_19996850_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (57.9ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110819165907)
+Migrating to AddColumnsToUsers (20110820052146)
+Migrating to AddAttachmentPhotoToUser (20110820052323)
+Migrating to AddMoreColumnsToUsers (20110820171641)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 11:58:27 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (137.6ms)
+Rendered users/show.html.erb within layouts/application (184.4ms)
+Completed   in 307ms
+
+ActionView::Template::Error (undefined method `qrcode' for #<#<Class:0x24abc60>:0x24aadd8>):
+    2: 
+    3: <div class="user_right_column">
+    4: QR Code<br />
+    5: <%= qrcode('http://www.yahoo.com/', 2, 8, 'my-qrcode') %>
+    6: <div id="my-qrcode">
+    7: 
+    8: </div>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__272278522_19220680_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.0ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/Ben/desktop/work/sidework/swTucson/vendor/plugins/qrcode/install.rb:7)
+DEPRECATION WARNING: register_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from /Users/Ben/desktop/work/sidework/swTucson/vendor/plugins/qrcode/init.rb:3)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:10:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (137.3ms)
+Rendered users/show.html.erb within layouts/application (184.2ms)
+Completed   in 309ms
+
+ActionView::Template::Error (undefined method `qrcode' for #<#<Class:0x249e740>:0x249d87c>):
+    2: 
+    3: <div class="user_right_column">
+    4: QR Code<br />
+    5: <%= qrcode('http://www.yahoo.com/', 2, 8, 'my-qrcode') %>
+    6: <div id="my-qrcode">
+    7: 
+    8: </div>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__272278522_19191280_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.2ms)
+DEPRECATION WARNING: register_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from /Users/Ben/desktop/work/sidework/swTucson/vendor/plugins/qrcode/init.rb:3)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:14:48 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (137.4ms)
+Rendered users/show.html.erb within layouts/application (151.9ms)
+Completed 200 OK in 277ms (Views: 165.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:15:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.3ms)
+Rendered shared/_more_contact_info.html.erb (1.1ms)
+Rendered users/_user_show_left_column.html.erb (127.9ms)
+Rendered users/show.html.erb within layouts/application (141.5ms)
+Completed 200 OK in 192ms (Views: 153.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:15:50 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.5ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (128.8ms)
+Rendered users/show.html.erb within layouts/application (143.0ms)
+Completed 200 OK in 193ms (Views: 155.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 12:16:10 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/Ben/desktop/work/sidework/swTucson/vendor/plugins/qrcode/uninstall.rb:7)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:26:54 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (140.4ms)
+Rendered users/show.html.erb within layouts/application (153.7ms)
+Completed 200 OK in 276ms (Views: 165.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:27:28 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (137.3ms)
+Rendered users/show.html.erb within layouts/application (150.4ms)
+Completed 200 OK in 1865ms (Views: 160.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:28:26 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.4ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (138.2ms)
+Rendered users/show.html.erb within layouts/application (165.3ms)
+Completed 200 OK in 1857ms (Views: 175.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:28:53 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.3ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (60.1ms)
+Rendered users/show.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 1869ms (Views: 189.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:30:43 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed   in 170ms
+
+RQRCode::QRCodeArgumentError (The passed data is NilClass, not String):
+  app/controllers/users_controller.rb:38:in `new'
+  app/controllers/users_controller.rb:38:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Aug 20 12:31:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (1.3ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (12.0ms)
+Rendered users/show.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 1775ms (Views: 48.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 12:31:58 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 12:31:58 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Aug 20 12:32:05 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 309ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 12:32:05 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (14.8ms)
+Rendered users/show.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 1837ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 12:35:26 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (15.0ms)
+Rendered users/show.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 1747ms (Views: 51.4ms | ActiveRecord: 0.4ms)

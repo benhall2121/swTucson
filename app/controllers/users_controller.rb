@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  require 'rqrcode'
   before_filter :login_required, :except => [:new, :create]
 
   def new
@@ -33,6 +34,7 @@ class UsersController < ApplicationController
   end
   
   def show  
-    @user = User.find(params[:id])	  
+    @user = User.find(params[:id])
+    @qr = RQRCode::QRCode.new(user_path(current_user))
   end
 end
