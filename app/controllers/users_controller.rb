@@ -35,6 +35,6 @@ class UsersController < ApplicationController
   
   def show  
     @user = User.find(params[:id])
-    @qr = RQRCode::QRCode.new(request.protocol + request.host_with_port + user_path(current_user))
+    @qr = RQRCode::QRCode.new(request.protocol + request.host_with_port + user_path(current_user), :size => 4, :level => :h)
   end
 end
