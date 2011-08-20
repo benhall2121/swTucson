@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     :path => ":rails_root/public/assets/user/:id/:style/:basename.:extension",
     :default_url => "/assets/user/default/:style/default.jpg"
 
-  validates_attachment_size :photo, :less_than => 5.megabytes
+  validates_attachment_size :photo, :less_than => 10.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/pjpeg', 'image/x-png', 'image/jpg']
 
   validates_presence_of :username

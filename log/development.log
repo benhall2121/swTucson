@@ -1953,3 +1953,9 @@ Rendered shared/_more_contact_info.html.erb (1.4ms)
 Rendered users/_user_show_left_column.html.erb (15.3ms)
 Rendered users/show.html.erb within layouts/application (58.7ms)
 Completed 200 OK in 4144ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 13:33:33 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
