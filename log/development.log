@@ -606,3 +606,108 @@ Started GET "/" for 127.0.0.1 at Fri Aug 19 22:47:38 -0700 2011
   Processing by SessionsController#new as HTML
 Rendered sessions/new.html.erb within layouts/application (14.1ms)
 Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 10:00:16 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 10:00:18 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (278.4ms)
+Completed 200 OK in 290ms (Views: 287.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:00:22 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (132.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (152.6ms)
+Completed 200 OK in 219ms (Views: 187.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:06:17 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (54.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/new.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 122ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Aug 20 10:06:42 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (55.1ms)
+Rendered users/edit.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 271ms (Views: 156.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:07:00 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (116.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/new.html.erb within layouts/application (137.1ms)
+Completed 200 OK in 179ms (Views: 146.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:08:21 -0700 2011
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 88ms
+
+ActionView::MissingTemplate (Missing partial users/user with {:formats=>[:html], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :locale=>[:en, :en]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  app/controllers/users_controller.rb:6:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:08:38 -0700 2011
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 162ms
+
+ActionView::MissingTemplate (Missing template /users/1 with {:formats=>[:html], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :locale=>[:en, :en]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views", "/Users/Ben/desktop/work/sidework/swTucson", "/"):
+  app/controllers/users_controller.rb:6:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Aug 20 10:08:40 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (127.5ms)
+Rendered users/edit.html.erb within layouts/application (140.7ms)
+Completed 200 OK in 183ms (Views: 150.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:08:47 -0700 2011
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 67ms
+
+ActionView::MissingTemplate (Missing template /users/1 with {:formats=>[:html], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :locale=>[:en, :en]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views", "/Users/Ben/desktop/work/sidework/swTucson", "/"):
+  app/controllers/users_controller.rb:6:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Sat Aug 20 10:09:17 -0700 2011
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 61ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 10:09:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 210ms (Views: 53.5ms | ActiveRecord: 0.6ms)

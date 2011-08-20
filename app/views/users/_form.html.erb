@@ -1,5 +1,26 @@
 <%= form_for @user, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
+  <% if @user.new_record? %>
+  
+  <p>
+    <%= f.label "Username" %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label "Email" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  
+  <% else %>
+  
   <p>
     <%= f.file_field :photo %>
   </p>
@@ -15,5 +36,8 @@
     <%= f.label "Band Name" %><br />
     <%= f.text_field :band %>
   </p>
+  
+  <% end %>
+  
   <p><%= f.submit (@user.new_record? ? "Sign up" : "Update") %></p>
 <% end %>
