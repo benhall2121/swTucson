@@ -3,6 +3,16 @@
   <% if @user.user_type == 'Patron' %>
    <%= f.hidden_field :user_type %>
      <% if @user.new_record? %>
+       <p>Welcome and thank you for supporting the arts!<br/>
+       Fill out the form below in order to:
+         <ul>
+       	   <li>Use the QRTip Jar</li>
+       	   <li>Follow your favorite artist</li>
+       	   <li>Follow up and coming artists</li>
+       	   <li>Search for artists</li>
+       	   <li>Receive the weekly I Tip Artists Newsletter</li>
+	 </ul>
+      </p>
       <p>
         <%= f.label "Email" %><br />
         <%= f.text_field :email %>
@@ -22,6 +32,17 @@
     </p>
    
   <% else %>
+  <p>
+  Welcome and thank you for supporting the arts!<br/>
+  Fill out the form below in order to: 
+    <ul>
+      <li>Receive tips through the QRTip Jar</li>
+      <li>Create a profile</li>
+      <li>Link to your web site and social networks</li>
+      <li>Advertise your gigs and events</li>
+      <li>Receive reports listing your patrons and their email addresses</li> 
+    </ul>
+  </p>
   <p>
    GET FED!
   </p>
@@ -62,19 +83,23 @@
     <%= f.text_area :bio %>
   </p>
   <p>
+    <%= f.label "Paypal Email" %> <span class="small_instruction">(The email address of your paypal account so that you can accept donations)</span><br />
+    <%= f.text_field :paypal_email %>
+  </p>
+  <p>
     <%= f.label "Website" %><br />
     <%= f.text_field :web_site %>
   </p>
   <p>
-    <%= f.label "Facebook" %><span class="small_instruction">(URL or Username)</span><br />
+    <%= f.label "Facebook" %> <span class="small_instruction">(URL or Username)</span><br />
     <%= f.text_field :facebook %>
   </p>
   <p>
-    <%= f.label "Twitter" %><span class="small_instruction">(URL or Username)</span><br />
+    <%= f.label "Twitter" %> <span class="small_instruction">(URL or Username)</span><br />
     <%= f.text_field :twitter %>
   </p>
   <p>
-    <%= f.label "YouTube" %><span class="small_instruction">(URL or Username)</span><br />
+    <%= f.label "YouTube" %> <span class="small_instruction">(URL or Username)</span><br />
     <%= f.text_field :youTube %>
   </p>
   <p>

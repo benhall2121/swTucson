@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110821055852) do
+ActiveRecord::Schema.define(:version => 20110821182623) do
 
   create_table "events", :force => true do |t|
     t.integer  "user_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20110821055852) do
     t.string   "user_type"
     t.string   "zip"
     t.boolean  "teacher"
+    t.string   "paypal_email"
   end
 
 end

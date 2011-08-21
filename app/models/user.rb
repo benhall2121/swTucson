@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :username, :email, :password, :password_confirmation, :fname, :lname, :band, :photo, :arts_type, :ind_group, :name, :artist_name, :bio, :web_site, :facebook, :twitter, :youTube, :user_type, :zip, :teacher 
+  attr_accessible :username, :email, :password, :password_confirmation, :fname, :lname, :band, :photo, :arts_type, :ind_group, :name, :artist_name, :bio, :web_site, :facebook, :twitter, :youTube, :user_type, :zip, :teacher, :paypal_email 
 
   attr_accessor :password
   before_save :prepare_password
@@ -34,22 +34,6 @@ class User < ActiveRecord::Base
 
   def encrypt_password(pass)
     BCrypt::Engine.hash_secret(pass, password_salt)
-  end
-
-  def paypal_url(return_url)
-    values = {
-      :business => 'seller_1229899173_biz@railscasts.com',
-      :cmd => '_cart',
-      :upload => 1,
-      :return => return_url,
-      :invoice => "1",
-      :amount => "200",
-      :item_name => "Donating to Ben",
-      :item_number => "1",
-      :quantity => "1"
-    }
-    
-    "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
   end
   
   def self.search(search)

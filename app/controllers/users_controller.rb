@@ -43,9 +43,6 @@ class UsersController < ApplicationController
   end
   
   def home
-    if current_user
-      redirect_to user_path(current_user)  
-    end
   end
   
   def about_us  
@@ -53,5 +50,46 @@ class UsersController < ApplicationController
   
   def qr_code
     @qr = RQRCode::QRCode.new(request.protocol + request.host_with_port + user_path(current_user), :size => 8, :level => :h)  
+  end
+  
+  def donate_paypal
+    @user = User.find(params[:id])
+    amount = params[:amount].gsub(/\$/,"").to_i
+    amount_to_donate_to_iTip = (amount * 0.3)
+    amount_to_donate_to_artist = amount - amount_to_donate_to_iTip
+  	  
+    values = {
+      :cmd => '_xclick',
+      :business => @user.paypal_email,
+      :item_name => "Donating to " + username(@user),
+      :currency_code => "USD",
+      :amount => amount_to_donate_to_artist,
+      :upload => 1,
+      :return => user_url(@user)
+    }
+  	  
+    redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+    
+  end
+  
+  def username(u)
+    name = ''	  
+    if !u.artist_name.nil? && !u.artist_name.blank?
+      name = u.artist_name + ' '
+    end
+    
+    if name == '' && !u.name.nil? && !u.name.blank?
+      name = u.name	
+    end
+    
+    if name == '' && !u.username.nil? && !u.username.blank?
+      name = u.username    
+    end
+    
+    if name.nil? && name.blank?
+      name = ''    
+    end 
+    
+    return name
   end
 end
