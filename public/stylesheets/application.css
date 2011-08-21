@@ -101,17 +101,15 @@ img{
 }
 
 .header_top div{	
- display:inline-block;
 }
 
 div.supportTheArts{
- text-align:left;	
- width:85%;
+ text-align:right;
  font-family: 'Short Stack', cursive;
  font-style:italic;
  font-weight:bold;
- font-size:48px;
- padding:10px 0 20px 0;
+ font-size:15px;
+ padding:25px 3px 5px 0;
 }
 
 .loginout{
@@ -149,19 +147,14 @@ div.supportTheArts{
 
 .why_patron_div, .why_artists_div{
   display:inline-block;
-  width:19%;
+  width:10%;
 }
 
 .patron_div, .artist_div{
   display:inline-block;
-  width:26%;
+  width:35%;
   text-align:left;
-  border: 1px solid gray;
   padding: 5px 10px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
 }
 
 div.patron_header, div.artist_header{
@@ -180,7 +173,31 @@ div.artist_join_us{
   text-align:right;
 }
 
+.info_on_top{
+	
+}
 
+.div_button_wrapper_artist, .div_button_wrapper_patron{
+  border: 1px solid gray;
+  padding: 5px 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;	
+}
+
+.div_button_wrapper_artist:hover, .div_button_wrapper_patron:hover{
+	border: 1px solid #000;	
+	cursor:pointer;
+}
+
+.featured_artist_div div{
+ display:inline-block;	
+}
+
+.fa_bio{
+  vertical-align:top;	
+}
 
 /******************************  End Home  ******************************/
 
@@ -230,3 +247,13 @@ table.events_table input[type=text]{
 }
 
 /******************************  End Events  ******************************/
+
+
+/******************************  QR Codes  ******************************/
+
+.qr_code_div{
+ text-align:center;	
+}
+ 
+ /******************************  END QR Codes  ******************************/
+ 

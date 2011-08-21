@@ -1,35 +1,5 @@
-<style type="text/css">
- table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
- }
- td {
-   border-width: 0;
-   border-style: none;
-   border-color: #0000ff;
-   border-collapse: collapse;
-   padding: 0;
-   margin: 0;
-   width: 10px;
-   height: 10px;
- }
- td.black { background-color: #000; }
- td.white { background-color: #fff; }
-</style>
+<div class="qr_code_div">
+  <%= image_tag("https://chart.googleapis.com/chart?chs=500x500&cht=qr&chld=h&chl=" + request.protocol + request.host_with_port + user_path(current_user)) %>
+</div>
 
-<table>
- <% @qr.modules.each_index do |x| -%>
-   <tr>
-   <% @qr.modules.each_index do |y| -%>
-    <% if @qr.dark?(x,y) -%>
-    <td class="black"/>
-    <% else -%>
-    <td class="white"/>
-    <% end -%>
-   <% end -%>
-   </tr>
- <% end -%>
-</table>
 

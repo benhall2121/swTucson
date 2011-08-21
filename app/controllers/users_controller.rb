@@ -39,17 +39,17 @@ class UsersController < ApplicationController
   
   def show  
     @user = User.find(params[:id])
-    @qr = RQRCode::QRCode.new(request.protocol + request.host_with_port + user_path(current_user), :size => 8, :level => :h)
   end
   
   def home
+    @fa_user = User.find(rand(User.count+1))
+    @upcoming_events = Event.find(:all, :conditions => ['event_date > ?', Time.now ], :order => 'event_date', :limit => 5)
   end
   
   def about_us  
   end
   
   def qr_code
-    @qr = RQRCode::QRCode.new(request.protocol + request.host_with_port + user_path(current_user), :size => 8, :level => :h)  
   end
   
   def donate_paypal

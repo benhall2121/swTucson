@@ -11,6 +11,29 @@ module ApplicationHelper
     link_to_function(name, ("add_fields(this, '#{association}', '#{escape_javascript(fields)}')"))
   end
 	
+  def username_by_id(us)
+    u = User.find(us)	  
+  	  
+    name = ''	  
+    if !u.artist_name.nil? && !u.artist_name.blank?
+      name = u.artist_name + ' '
+    end
+    
+    if name == '' && !u.name.nil? && !u.name.blank?
+      name = u.name	
+    end
+    
+    if name == '' && !u.username.nil? && !u.username.blank?
+      name = u.username    
+    end
+    
+    if name.nil? && name.blank?
+      name = ''    
+    end 
+    
+    return name
+  end
+  
   def username(u)
     name = ''	  
     if !u.artist_name.nil? && !u.artist_name.blank?

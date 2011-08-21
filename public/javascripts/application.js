@@ -18,6 +18,16 @@ $(document).ready(function(){
           $.get($("#users_search").attr("action"), $("#users_search").serialize(), null, "script");
           return false;
        });
+       
+       $(".div_button_wrapper_artist").click(function(){
+       	  al = $("#new_artist_path").attr('href');
+       	  document.location = al;
+       });
+       
+       $(".div_button_wrapper_patron").click(function(){
+       	  al = $("#new_patron_path").attr('href');
+       	  document.location = al;
+       });
 });		
 		
 function remove_fields(link) {

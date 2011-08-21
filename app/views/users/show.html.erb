@@ -1,6 +1,10 @@
 <%= render 'user_show_left_column' %>
 
 <div class="user_right_column">
+
+<% if @user.user_type == "Patron" %>
+You Are a Patron! Coming Soon!
+<% else %>
 <%= simple_format(@user.bio) %>
 
 <% if @user.teacher? %>
@@ -12,7 +16,11 @@
 <p>
 Donate To Support <%= username(@user) %><br />
 Amount To Donate: <%= select_tag 'amount', options_for_select(%w($1 $1 $2 $5 $10 $20 $50 $100)) %> <br/>
+<% if !@user.paypal_email.blank? && !@user.paypal_email.blank? %>
 <%= link_to image_tag("donate_paypal.jpg"), donate_paypal_path(@user.id), {:onclick => "this.href +='?amount='+$('#amount').val(); return true"} %>
+<% else %>
+<%= image_tag("donate_paypalGray.jpg") %>
+<% end %>
 </p>
 
 <p>
@@ -47,10 +55,12 @@ Upcoming Events for <%= username(@user) %><br />
 </table>
 </p> 
 
-<% if @user.facebook %>
+<% if !@user.facebook.blank? && !@user.facebook.blank? %>
 <p>
   <iframe src="http://www.facebook.com/plugins/like.php?href=" + <%= facebook_link(@user.facebook) %> + ";send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
 </p>
+<% end %>
+
 <% end %>
 
 </div>

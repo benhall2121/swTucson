@@ -10452,3 +10452,2321 @@ Rendered shared/_social_sites.html.erb (4.1ms)
   [1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)[0m
 Rendered users/show.html.erb within layouts/application (294.6ms)
 Completed 200 OK in 4936ms (Views: 307.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sun Aug 21 12:39:52 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)[0m
+Rendered events/_events_fields.html.erb (17.4ms)
+Rendered events/_events_fields.html.erb (14.8ms)
+Rendered events/_events_fields.html.erb (12.1ms)
+Rendered events/_events_fields.html.erb (13.3ms)
+Rendered events/_events_fields.html.erb (12.3ms)
+Rendered users/_form.html.erb (521.0ms)
+Rendered users/edit.html.erb within layouts/application (545.6ms)
+Completed 200 OK in 605ms (Views: 559.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sun Aug 21 12:40:02 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ALjG728nho9ySx7bhCO0nwHLjj2uFf8DCrFcla0c57E=", "utf8"=>"✓", "id"=>"1", "user"=>{"name"=>"Ben Hall", "events_attributes"=>{"0"=>{"address"=>"", "city"=>"", "zip"=>"", "title"=>"asd", "id"=>"3", "user_id"=>"1", "event_date(1i)"=>"2011", "event_date(2i)"=>"8", "event_date(3i)"=>"21", "state"=>""}, "1"=>{"address"=>"asdasd", "city"=>"", "zip"=>"", "title"=>"another", "id"=>"4", "user_id"=>"1", "event_date(1i)"=>"2011", "event_date(2i)"=>"10", "event_date(3i)"=>"21", "state"=>""}, "2"=>{"address"=>"", "city"=>"", "zip"=>"", "title"=>"third", "id"=>"5", "user_id"=>"1", "event_date(1i)"=>"2012", "event_date(2i)"=>"10", "event_date(3i)"=>"21", "state"=>""}, "3"=>{"address"=>"", "city"=>"", "zip"=>"", "title"=>"fourth", "id"=>"6", "user_id"=>"1", "event_date(1i)"=>"2013", "event_date(2i)"=>"5", "event_date(3i)"=>"21", "state"=>""}}, "zip"=>"94566", "artist_name"=>"Benerino", "teacher"=>"true", "youTube"=>"http://www.youtube.com/user/benhall2121", "user_type"=>"Artist", "web_site"=>"www.benerino.com", "bio"=>"I am awesome!", "facebook"=>"http://www.facebook.com/benhall2121", "arts_type"=>"Music", "paypal_email"=>"", "twitter"=>"http://www.twitter.com/benhall2121"}}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` IN (3, 4, 5, 6) AND (`events`.user_id = 1)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`username` = BINARY 'benhall2121') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `users` SET `updated_at` = '2011-08-21 19:40:02', `paypal_email` = '' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 246ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:40:02 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_user_show_left_column.html.erb (7.0ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered shared/_social_sites.html.erb (3.9ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (237.7ms)
+Completed 200 OK in 4853ms (Views: 249.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:40:55 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (120.9ms)
+Rendered shared/_more_contact_info.html.erb (2.0ms)
+Rendered shared/_social_sites.html.erb (4.3ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered users/show.html.erb within layouts/application (231.6ms)
+Completed 200 OK in 4629ms (Views: 245.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/images/donate_paypalGray.jpg" for 127.0.0.1 at Sun Aug 21 12:41:00 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/donate_paypalGray.jpg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:41:28 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_user_show_left_column.html.erb (5.9ms)
+Rendered shared/_more_contact_info.html.erb (1.7ms)
+Rendered shared/_social_sites.html.erb (3.7ms)
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (99.8ms)
+Completed 200 OK in 4659ms (Views: 110.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:44:24 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (5.8ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered shared/_social_sites.html.erb (4.4ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered users/show.html.erb within layouts/application (217.9ms)
+Completed 200 OK in 4585ms (Views: 230.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sun Aug 21 12:45:16 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 12:45:17 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 21 12:45:20 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Aug 21 12:45:25 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"ALjG728nho9ySx7bhCO0nwHLjj2uFf8DCrFcla0c57E=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"d@yahoo.com"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'd@yahoo.com' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'd@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 520ms
+
+
+Started GET "/users/5" for 127.0.0.1 at Sun Aug 21 12:45:26 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered users/_user_show_left_column.html.erb (5.2ms)
+Rendered users/show.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 4384ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at Sun Aug 21 12:45:34 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+Rendered users/_form.html.erb (205.1ms)
+Rendered users/edit.html.erb within layouts/application (230.9ms)
+Completed 200 OK in 292ms (Views: 244.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at Sun Aug 21 12:45:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (4.9ms)
+Rendered users/show.html.erb within layouts/application (140.6ms)
+Completed 200 OK in 4586ms (Views: 151.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sun Aug 21 12:45:51 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 12:45:51 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 21 12:45:53 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Aug 21 12:46:01 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"ALjG728nho9ySx7bhCO0nwHLjj2uFf8DCrFcla0c57E=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121@yahoo.com"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121@yahoo.com' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 103ms (Views: 39.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Aug 21 12:46:07 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"ALjG728nho9ySx7bhCO0nwHLjj2uFf8DCrFcla0c57E=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall212134@yahoo.com"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall212134@yahoo.com' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall212134@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 462ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:46:07 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (5.1ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered shared/_social_sites.html.erb (3.8ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered users/show.html.erb within layouts/application (213.6ms)
+Completed 200 OK in 4612ms (Views: 223.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sun Aug 21 12:46:17 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered events/_events_fields.html.erb (13.0ms)
+Rendered events/_events_fields.html.erb (13.4ms)
+Rendered events/_events_fields.html.erb (13.3ms)
+Rendered events/_events_fields.html.erb (12.1ms)
+Rendered events/_events_fields.html.erb (16.4ms)
+Rendered users/_form.html.erb (490.9ms)
+Rendered users/edit.html.erb within layouts/application (512.5ms)
+Completed 200 OK in 590ms (Views: 529.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 12:46:25 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/home.html.erb within layouts/application (239.4ms)
+Completed 200 OK in 254ms (Views: 251.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:49:16 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (5.4ms)
+Rendered shared/_more_contact_info.html.erb (1.7ms)
+Rendered shared/_social_sites.html.erb (7.0ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered users/show.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 4590ms (Views: 114.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 12:53:37 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 4613ms (Views: 142.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 12:54:00 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (249.6ms)
+Completed 200 OK in 262ms (Views: 259.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sun Aug 21 12:54:05 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 12:54:05 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 21 12:54:10 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Aug 21 12:54:21 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"ALjG728nho9ySx7bhCO0nwHLjj2uFf8DCrFcla0c57E=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"be@yahoo.com"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'be@yahoo.com' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'be@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 407ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sun Aug 21 12:54:21 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_user_show_left_column.html.erb (8.9ms)
+Rendered users/show.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 4810ms (Views: 43.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 21 12:57:41 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+Rendered users/_users.html.erb (204.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/index.html.erb within layouts/application (242.3ms)
+Completed 200 OK in 295ms (Views: 253.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 12:57:47 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_user_show_left_column.html.erb (5.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered shared/_social_sites.html.erb (4.1ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (100.7ms)
+Completed 200 OK in 4570ms (Views: 112.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/about_us" for 127.0.0.1 at Sun Aug 21 12:58:34 -0700 2011
+  Processing by UsersController#about_us as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/about_us.html.erb within layouts/application (280.9ms)
+Completed 200 OK in 294ms (Views: 292.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 12:59:48 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered users/home.html.erb within layouts/application (235.7ms)
+Completed 200 OK in 247ms (Views: 243.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sun Aug 21 12:59:50 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 111ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sun Aug 21 12:59:51 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_user_show_left_column.html.erb (5.5ms)
+Rendered users/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 4568ms (Views: 37.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sun Aug 21 13:00:01 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 13:00:01 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sun Aug 21 13:00:12 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered events/_events_fields.html.erb (13.2ms)
+Rendered users/_form.html.erb (245.7ms)
+Rendered users/new.html.erb within layouts/application (267.4ms)
+Completed 200 OK in 468ms (Views: 278.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 21 13:00:57 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Aug 21 13:01:03 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"ALjG728nho9ySx7bhCO0nwHLjj2uFf8DCrFcla0c57E=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 332ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 13:01:04 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (5.4ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered shared/_social_sites.html.erb (6.2ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered users/show.html.erb within layouts/application (216.4ms)
+Completed 200 OK in 4901ms (Views: 229.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:01:17 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 4613ms (Views: 68.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:03:15 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 4697ms (Views: 66.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:03:35 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 4657ms (Views: 64.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:04:00 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 4602ms (Views: 84.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:05:33 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 5371ms (Views: 66.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:09:37 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 4584ms (Views: 63.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:18:50 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 4494ms (Views: 64.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/black10x10.jpg" for 127.0.0.1 at Sun Aug 21 13:18:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/black10x10.jpg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:19:21 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 4512ms (Views: 65.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/black10x10.jpg" for 127.0.0.1 at Sun Aug 21 13:19:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/black10x10.jpg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:19:45 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 4589ms (Views: 62.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/images/black10x10.jpg" for 127.0.0.1 at Sun Aug 21 13:19:50 -0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/black10x10.jpg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:20:04 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (169.8ms)
+Completed 200 OK in 4641ms (Views: 180.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:21:24 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 4710ms (Views: 68.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:22:24 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1802.1ms)
+Completed 200 OK in 6408ms (Views: 1815.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:23:25 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 4722ms (Views: 69.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:23:56 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 4545ms (Views: 68.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:26:55 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 5088ms (Views: 71.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:27:01 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (6.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 5255ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (126.7ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:28:04 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (165.3ms)
+Completed 200 OK in 4634ms (Views: 175.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:28:09 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (5.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 5769ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.2ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:33:25 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (1863.2ms)
+Completed 200 OK in 6320ms (Views: 1874.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:33:32 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 5135ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:33:56 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+ERROR: compiling _app_views_users_qr_code_html_erb___957945764_18736770_0 RAISED compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/qr_code.html.erb:6: syntax error, unexpected ',', expecting ')'
+...( image_tag('black10x10.jpg'), :style => 'border:1px solid r...
+                              ^
+Function body:           def _app_views_users_qr_code_html_erb___957945764_18736770_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/qr_code";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<table class="qr_code_table">
+');@output_buffer.append_if_string=   @qr.modules.each_index do |x| 
+@output_buffer.safe_concat('   <tr>
+');@output_buffer.append_if_string=     @qr.modules.each_index do |y| 
+     if @qr.dark?(x,y) 
+@output_buffer.safe_concat('    <td>');@output_buffer.append= ( image_tag('black10x10.jpg'), :style => 'border:1px solid red;' );@output_buffer.safe_concat('</td>
+');     else 
+@output_buffer.safe_concat('    <td>');@output_buffer.append= ( image_tag('white10x10.jpg') );@output_buffer.safe_concat('</td>
+');     end 
+    end 
+@output_buffer.safe_concat('   </tr>
+');  end 
+@output_buffer.safe_concat('</table>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Ben/desktop/work/sidework/swTucson/app/views/users/qr_code.html.erb:18:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__434435962__process_action__785232580__callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/chunked.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:67:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:38:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/qr_code.html.erb within layouts/application (2.3ms)
+Completed   in 4453ms
+
+ActionView::Template::Error (compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/qr_code.html.erb:6: syntax error, unexpected ',', expecting ')'
+...( image_tag('black10x10.jpg'), :style => 'border:1px solid r...
+                              ^):
+    3:    <tr>
+    4:    <% @qr.modules.each_index do |y| -%>
+    5:     <% if @qr.dark?(x,y) -%>
+    6:     <td><%= image_tag('black10x10.jpg'), :style => 'border:1px solid red;' %></td>
+    7:     <% else -%>
+    8:     <td><%= image_tag('white10x10.jpg') %></td>
+    9:     <% end -%>
+  app/views/users/qr_code.html.erb:18:in `compile'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (64.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:34:14 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1899.0ms)
+Completed 200 OK in 6445ms (Views: 1911.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:34:21 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5208ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:34:39 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1926.4ms)
+Completed 200 OK in 6394ms (Views: 1938.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:34:45 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (4.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5070ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:35:47 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1954.8ms)
+Completed 200 OK in 6480ms (Views: 1967.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:35:53 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5427ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.9ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:36:09 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1958.7ms)
+Completed 200 OK in 6500ms (Views: 1971.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:36:17 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5069ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:36:34 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1939.0ms)
+Completed 200 OK in 6397ms (Views: 1951.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:36:41 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5264ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:37:03 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2232.1ms)
+Completed 200 OK in 7535ms (Views: 2246.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:37:11 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (13.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5710ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:37:18 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2328.6ms)
+Completed 200 OK in 7498ms (Views: 2339.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:37:27 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 4713ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:38:39 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1940.6ms)
+Completed 200 OK in 6472ms (Views: 1953.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:38:47 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5986ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:41:01 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1941.7ms)
+Completed 200 OK in 6613ms (Views: 1953.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:41:08 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (4.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5164ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:41:46 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1970.4ms)
+Completed 200 OK in 6478ms (Views: 1982.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:41:53 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (7.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5582ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.2ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:42:11 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1945.7ms)
+Completed 200 OK in 6447ms (Views: 1958.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:42:17 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (37.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5193ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:42:32 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2052.3ms)
+Completed 200 OK in 6541ms (Views: 2068.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:42:40 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5112ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (5.0ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:43:26 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1954.4ms)
+Completed 200 OK in 7236ms (Views: 1966.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:43:34 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5278ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:44:16 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1920.6ms)
+Completed 200 OK in 6436ms (Views: 1933.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:44:23 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5853ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.7ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:44:57 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1873.0ms)
+Completed 200 OK in 6308ms (Views: 1886.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:45:04 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (19.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5137ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:45:41 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1881.0ms)
+Completed 200 OK in 6438ms (Views: 1893.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:45:47 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (8.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5094ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:47:17 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2023.2ms)
+Completed 200 OK in 6632ms (Views: 2034.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:47:24 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5312ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:47:55 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (4.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 4638ms (Views: 68.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:48:00 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (11.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5281ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.9ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:50:11 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 4564ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:50:16 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (12.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5699ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:50:37 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2016.0ms)
+Completed 200 OK in 6551ms (Views: 2027.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:50:45 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 4608ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:51:35 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2090.8ms)
+Completed 200 OK in 6664ms (Views: 2103.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:51:43 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (37.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 4769ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:52:25 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2045.1ms)
+Completed 200 OK in 6665ms (Views: 2060.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:52:33 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5116ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:52:46 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1995.6ms)
+Completed 200 OK in 6461ms (Views: 2010.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:52:54 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5097ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:56:19 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (2393.5ms)
+Completed 200 OK in 7075ms (Views: 2480.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:56:26 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (7.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5779ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 13:59:37 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1827.5ms)
+Completed 200 OK in 6386ms (Views: 1840.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 13:59:44 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5575ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:00:21 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1895.7ms)
+Completed 200 OK in 6461ms (Views: 1907.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:00:28 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5452ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:00:47 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1867.9ms)
+Completed 200 OK in 6433ms (Views: 1881.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:00:54 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5002ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:01:17 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1894.1ms)
+Completed 200 OK in 6448ms (Views: 1907.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:01:23 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (8.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5437ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:11:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/print.css" for 127.0.0.1 at Sun Aug 21 14:11:58 -0700 2011
+
+ActionController::RoutingError (No route matches "/print.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:14:52 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1974.4ms)
+Completed 200 OK in 6774ms (Views: 1988.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:14:59 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5944ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.6ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:15:51 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (1953.0ms)
+Completed 200 OK in 6992ms (Views: 1969.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:15:58 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (12.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5620ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:17:19 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (104.2ms)
+Completed 200 OK in 199ms (Views: 135.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:17:20 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 73ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:18:13 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (218.1ms)
+Completed 200 OK in 302ms (Views: 237.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:18:13 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 124ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:18:34 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (240.2ms)
+Completed 200 OK in 336ms (Views: 265.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:18:35 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 113ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:18:56 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 4757ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:19:01 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5446ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:19:13 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 4713ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:19:18 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (8.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 5180ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:19:27 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (89.2ms)
+Completed 200 OK in 153ms (Views: 100.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:19:28 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 182ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:19:38 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (234.4ms)
+Completed 200 OK in 296ms (Views: 246.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:19:39 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (243.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 320ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:20:50 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (260.2ms)
+Completed 200 OK in 352ms (Views: 276.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:20:50 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (14.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 147ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:21:02 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (261.7ms)
+Completed 200 OK in 324ms (Views: 274.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:21:03 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 124ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:21:36 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 418ms (Views: 107.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:21:37 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (20.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 122ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:21:48 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/qr_code.html.erb within layouts/application (94.8ms)
+Completed 200 OK in 161ms (Views: 110.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:21:48 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 90ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Aug 21 14:22:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (4.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (202.7ms)
+Rendered shared/_more_contact_info.html.erb (1.8ms)
+Rendered shared/_social_sites.html.erb (4.1ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 1)
+Rendered users/show.html.erb within layouts/application (312.6ms)
+Completed 200 OK in 406ms (Views: 335.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/print.css" for 127.0.0.1 at Sun Aug 21 14:22:19 -0700 2011
+  Processing by UsersController#show as CSS
+  Parameters: {"id"=>"print"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed   in 186ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=print):
+  app/controllers/users_controller.rb:41:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (48.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (106.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:22:22 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (184.3ms)
+Completed 200 OK in 205ms (Views: 202.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/print.css" for 127.0.0.1 at Sun Aug 21 14:22:23 -0700 2011
+
+ActionController::RoutingError (No route matches "/print.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:22:27 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 167ms (Views: 105.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:22:27 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 178ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.8ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:23:17 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 170ms (Views: 114.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:23:17 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (12.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 149ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:25:50 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (195.1ms)
+Completed 200 OK in 263ms (Views: 211.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:25:51 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 85ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:26:33 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (284.8ms)
+Completed 200 OK in 352ms (Views: 305.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/qr_code/print.css" for 127.0.0.1 at Sun Aug 21 14:26:33 -0700 2011
+  Processing by UsersController#qr_code as CSS
+  Parameters: {"id"=>"print"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 106ms
+
+ActionView::MissingTemplate (Missing template users/qr_code with {:handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en], :formats=>[:css]} in view paths "/Users/Ben/desktop/work/sidework/swTucson/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/qr_code/1" for 127.0.0.1 at Sun Aug 21 14:27:04 -0700 2011
+  Processing by UsersController#qr_code as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/qr_code.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 341ms (Views: 262.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sun Aug 21 14:27:30 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:27:30 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:28:41 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:28:56 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:29:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:29:30 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:29:43 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (155.6ms)
+Completed 200 OK in 173ms (Views: 171.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:30:15 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:30:46 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:31:06 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:31:20 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:32:22 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:32:45 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:33:22 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:33:49 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:34:50 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:35:43 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:35:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:36:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:36:44 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:37:11 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:37:51 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:39:17 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:39:45 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:40:19 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:42:50 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:43:09 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:45:06 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:45:32 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:46:15 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:46:44 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sun Aug 21 14:46:45 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered events/_events_fields.html.erb (14.1ms)
+Rendered users/_form.html.erb (170.9ms)
+Rendered users/new.html.erb within layouts/application (190.2ms)
+Completed 200 OK in 439ms (Views: 205.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:47:41 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:48:06 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:48:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:48:25 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sun Aug 21 14:48:27 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (29.2ms)
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 333ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:49:47 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:54:07 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (6.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (202.0ms)
+Completed 200 OK in 288ms (Views: 218.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:55:27 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (131.8ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 193ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=0):
+  app/controllers/users_controller.rb:45:in `home'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (21.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:55:34 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 296ms (Views: 91.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:55:36 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+Rendered users/home.html.erb within layouts/application (204.2ms)
+Completed 200 OK in 283ms (Views: 215.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:55:38 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (3.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (198.2ms)
+Completed 200 OK in 272ms (Views: 210.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:55:39 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+Completed   in 61ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=0):
+  app/controllers/users_controller.rb:45:in `home'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (21.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:55:58 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered users/home.html.erb within layouts/application (76.6ms)
+Completed 200 OK in 279ms (Views: 90.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:56:00 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/home.html.erb within layouts/application (203.5ms)
+Completed 200 OK in 283ms (Views: 220.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:56:01 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/home.html.erb within layouts/application (211.0ms)
+Completed 200 OK in 283ms (Views: 224.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:56:03 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (8.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (32.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered users/home.html.erb within layouts/application (201.1ms)
+Completed 200 OK in 344ms (Views: 215.0ms | ActiveRecord: 40.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:56:04 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 157ms (Views: 90.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:56:05 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (2.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered users/home.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 170ms (Views: 101.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:56:06 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered users/home.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 153ms (Views: 92.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:57:09 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/home.html.erb within layouts/application (85.6ms)
+Completed 200 OK in 304ms (Views: 105.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:57:40 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (3.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+Rendered users/home.html.erb within layouts/application (200.0ms)
+Completed 200 OK in 278ms (Views: 211.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:57:43 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (234.5ms)
+Completed 200 OK in 321ms (Views: 246.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:57:59 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (2.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+Rendered users/home.html.erb within layouts/application (201.4ms)
+Completed 200 OK in 294ms (Views: 214.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:58:53 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+Rendered users/home.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 183ms (Views: 105.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Sun Aug 21 14:58:56 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (216.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered shared/_social_sites.html.erb (5.3ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 4)
+Rendered users/show.html.erb within layouts/application (294.6ms)
+Completed 200 OK in 365ms (Views: 310.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Sun Aug 21 14:58:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Rendered users/_user_show_left_column.html.erb (243.3ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered shared/_social_sites.html.erb (1.9ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT `events`.* FROM `events` WHERE (`events`.user_id = 4)
+Rendered users/show.html.erb within layouts/application (311.7ms)
+Completed 200 OK in 388ms (Views: 326.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 14:59:03 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered users/home.html.erb within layouts/application (192.8ms)
+Completed 200 OK in 267ms (Views: 203.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:01:47 -0700 2011
+
+SyntaxError (/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected ':', expecting ')'
+...ing_events = Event.find(:all :order('event_date desc') :limi...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected ':', expecting kEND
+...ll :order('event_date desc') :limit => 5)
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:95: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:01:57 -0700 2011
+
+SyntaxError (/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected '(', expecting ')'
+...nts = Event.find(:all, :order('event_date desc'), :limit => ...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected ')', expecting kEND
+...all, :order('event_date desc'), :limit => 5)
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:95: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:02:09 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mEvent Load (16.2ms)[0m  [1mSELECT `events`.* FROM `events` ORDER BY event_date desc LIMIT 5[0m
+Rendered users/home.html.erb within layouts/application (306.0ms)
+Completed   in 416ms
+
+ActionView::Template::Error (undefined method `events' for #<Array:0x221d200>):
+    65:         <td>Zip</td>
+    66:       </tr>
+    67:       
+    68: <% @upcoming_events.events.each do |f| %>
+    69:       <tr>
+    70:         <td><%= username(f.user_id) %></td>
+    71:         <td><%= f.title %></td>
+  app/views/users/home.html.erb:68:in `_app_views_users_home_html_erb___549713730_17876620_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:02:24 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events` ORDER BY event_date desc LIMIT 5
+Rendered users/home.html.erb within layouts/application (210.8ms)
+Completed   in 315ms
+
+ActionView::Template::Error (undefined method `artist_name' for 1:Fixnum):
+    67:       
+    68: <% @upcoming_events.each do |f| %>
+    69:       <tr>
+    70:         <td><%= username(f.user_id) %></td>
+    71:         <td><%= f.title %></td>
+    72:         <td><%= f.event_date %></td>
+    73:         <td><%= f.address %></td>
+  app/helpers/application_helper.rb:16:in `username'
+  app/views/users/home.html.erb:70:in `_app_views_users_home_html_erb___549713730_18276960_0'
+  app/views/users/home.html.erb:68:in `each'
+  app/views/users/home.html.erb:68:in `_app_views_users_home_html_erb___549713730_18276960_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (45.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (64.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:02:44 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events` ORDER BY event_date desc LIMIT 5[0m
+Rendered users/home.html.erb within layouts/application (111.9ms)
+Completed   in 350ms
+
+ActionView::Template::Error (undefined method `object' for #<Event:0x26ead64>):
+    67:       
+    68: <% @upcoming_events.each do |f| %>
+    69:       <tr>
+    70:         <td><%= username(f.object.user_id) %></td>
+    71:         <td><%= f.title %></td>
+    72:         <td><%= f.event_date %></td>
+    73:         <td><%= f.address %></td>
+  app/views/users/home.html.erb:70:in `_app_views_users_home_html_erb___549713730_20366550_0'
+  app/views/users/home.html.erb:68:in `each'
+  app/views/users/home.html.erb:68:in `_app_views_users_home_html_erb___549713730_20366550_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:03:31 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT `events`.* FROM `events` ORDER BY event_date desc LIMIT 5
+Rendered users/home.html.erb within layouts/application (105.6ms)
+Completed   in 211ms
+
+ActionView::Template::Error (undefined method `object' for #<Event:0x250c394>):
+    67:       
+    68: <% @upcoming_events.each do |f| %>
+    69:       <tr>
+    70:         <td><%= username(f.object.user) %></td>
+    71:         <td><%= f.title %></td>
+    72:         <td><%= f.event_date %></td>
+    73:         <td><%= f.address %></td>
+  app/views/users/home.html.erb:70:in `_app_views_users_home_html_erb___549713730_19338470_0'
+  app/views/users/home.html.erb:68:in `each'
+  app/views/users/home.html.erb:68:in `_app_views_users_home_html_erb___549713730_19338470_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (109.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (45.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (172.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:03:39 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (2.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events` ORDER BY event_date desc LIMIT 5[0m
+Rendered users/home.html.erb within layouts/application (259.6ms)
+Completed   in 367ms
+
+ActionView::Template::Error (undefined method `object' for #<Event:0x234c2fc>):
+    67:       
+    68: <% @upcoming_events.each do |f| %>
+    69:       <tr>
+    70:         <td><%= username(f.object.User) %></td>
+    71:         <td><%= f.title %></td>
+    72:         <td><%= f.event_date %></td>
+    73:         <td><%= f.address %></td>
+  app/views/users/home.html.erb:70:in `_app_views_users_home_html_erb___549713730_18466570_0'
+  app/views/users/home.html.erb:68:in `each'
+  app/views/users/home.html.erb:68:in `_app_views_users_home_html_erb___549713730_18466570_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (58.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:05:10 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT `events`.* FROM `events` ORDER BY event_date desc LIMIT 5
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (277.7ms)
+Completed 200 OK in 380ms (Views: 289.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:06:28 -0700 2011
+
+SyntaxError (/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected tCONSTANT, expecting ']'
+...ions => ['event_date > ?' Time.now ], :order => 'event_date'...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected ']', expecting kEND
+...> ['event_date > ?' Time.now ], :order => 'event_date', :lim...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:46: syntax error, unexpected ',', expecting kEND
+...now ], :order => 'event_date', :limit => 5)
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/controllers/users_controller.rb:95: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 21 15:06:36 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mSQL (1.8ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mEvent Load (2.4ms)[0m  [1mSELECT `events`.* FROM `events` WHERE (event_date > '2011-08-21 22:06:36') ORDER BY event_date LIMIT 5[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/home.html.erb within layouts/application (277.1ms)
+Completed 200 OK in 400ms (Views: 288.6ms | ActiveRecord: 5.3ms)

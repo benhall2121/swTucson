@@ -1,31 +1,83 @@
 
 <div class="patron_artist_login_wrapper">
  <div class="why_patron_div">
+   
+ </div>
+ <div class="patron_div">
+   <div class="info_on_top">
    Support Your Local Art Scene
    <ul>
      <li>Passion for the arts</li>
      <li>Easy way to support your favorite artists</li>
      <li>More personalized up to date and in-depth info</li>
    </ul>
- </div>
- <div class="patron_div">
-   <div class="patron_header">BE A PATRON</div>
-   <div class="artist_join_us">&nbsp</div>
-   <div class="patron_learn_more"><%= link_to "Learn More", new_user_path(:user_type => 'Patron') %></div>
+   </div>
+   <div class="div_button_wrapper_patron">
+     <div class="patron_header">BE A PATRON</div>
+     <div class="artist_join_us">&nbsp</div>
+     <div class="patron_learn_more"><%= link_to "Learn More", new_user_path(:user_type => 'Patron'), :id => 'new_patron_path' %></div>
+   </div>
  </div>
  <div class="artist_div">
-   <div class="artist_header">ARTISTS</div>
-   <div class="artist_join_us">JOIN US!</div>
-   <div class="artist_learn_more"><%= link_to "Learn More", new_user_path(:user_type => 'artist') %></div>
- </div>
- <div class="why_artists_div">
+   <div class="info_on_top">
    Why Artists should join
    <ul>
      <li>Connecting you to new patrons</li>
      <li>new revenue stream</li>
      <li>exposure</li>
    </ul>
+   </div>
+   <div class="div_button_wrapper_artist">
+     <div class="artist_header">ARTISTS</div>
+     <div class="artist_join_us">JOIN US!</div>
+     <div class="artist_learn_more"><%= link_to "Learn More", new_user_path(:user_type => 'artist'), :id => 'new_artist_path' %></div>
+   </div>
  </div>
+ <div class="why_artists_div">
+   
+ </div>
+</div>
+
+<div class="featured_artist_div">
+<h1>Featured Artists</h1>
+  <div class="fa_image">
+  	<%= link_to (image_tag @fa_user.photo.url(:small), :class => 'profile'), user_path(@fa_user) %>
+  </div>
+
+  <div class="fa_bio">
+   	Bio:<br/>
+  	<%= simple_format(@fa_user.bio) %>
+  	<%= link_to "Learn More", user_path(@fa_user) %>
+  </div>
+</div>
+
+<div>
+<h1>Upcoming Events</h1>
+<table>
+  
+      <tr>
+        <td>Artist</td>
+        <td>Title</td>
+        <td>Event Date</td>
+        <td>Address</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Zip</td>
+      </tr>
+      
+<% @upcoming_events.each do |f| %>
+      <tr>
+        <td><%= username_by_id(f.user_id) %></td>
+        <td><%= f.title %></td>
+        <td><%= f.event_date %></td>
+        <td><%= f.address %></td>
+        <td><%= f.city %></td>
+        <td><%= f.state %></td>
+        <td><%= f.zip %></td>
+      </tr>
+<% end %>
+</table>
+
 </div>
 
 

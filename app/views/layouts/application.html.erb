@@ -24,9 +24,6 @@
      
         <div class="enter_div">
           <div class="header_top">
-            <div class="supportTheArts">
-              Support the Arts!
-            </div>
           
             <div class="loginout">
             <% if current_user %>
@@ -34,6 +31,10 @@
             <% else %>
               <%= link_to "Log In", login_path %>
             <% end %>
+            </div>
+            
+            <div class="supportTheArts">
+              Support the Arts!
             </div>
           </div>
           
