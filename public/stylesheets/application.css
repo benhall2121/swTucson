@@ -79,6 +79,10 @@ img{
  border:none;	
 }
 
+.user_search_div div{
+ display:inline-block;
+ padding-right:8px;
+}
 
 /******************************  Header Show  ******************************/
 
@@ -216,3 +220,13 @@ img.profile:hover{
 
 
 /******************************  End Users Show  ******************************/
+
+
+
+/******************************  Events  ******************************/
+
+table.events_table input[type=text]{
+  width:120px;
+}
+
+/******************************  End Events  ******************************/

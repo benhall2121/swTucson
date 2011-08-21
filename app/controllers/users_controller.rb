@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   require 'rqrcode'
-  before_filter :login_required, :except => [:new, :create, :show, :home, :about_us]
+  before_filter :login_required, :except => [:new, :create, :show, :home, :about_us, :index]
 
+  def index
+    @users = User.search(params[:search]).paginate(:per_page => 10, :page => params[:page]) 
+  end
+  
   def new
     if current_user	 
     	redirect_to user_path(current_user)	    
@@ -45,5 +49,9 @@ class UsersController < ApplicationController
   end
   
   def about_us  
+  end
+  
+  def qr_code
+    @qr = RQRCode::QRCode.new(request.protocol + request.host_with_port + user_path(current_user), :size => 8, :level => :h)  
   end
 end

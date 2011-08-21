@@ -89,8 +89,27 @@
     <%= f.label "User Type" %><br />
     <%= f.select :user_type, ['Artist', 'Patron', 'Both'] %>
   </p>
+  <p>
+    <table class="events_table">
+      <tr>
+        <td>Title</td>
+        <td>Event Date</td>
+        <td>Address</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Zip</td>
+        <td></td>
+      </tr>
+    <%= f.fields_for :events do |builder| %>
+      <%= render "events/events_fields", :f => builder %>
+    <% end %>
+    <tr>
+      <td><%= link_to_add_fields "Add Event", f, :events, "events/events_fields" %></td>
+    </tr>  
+    </table>
+  </p>
   
   <% end %>
   
-  <p><%= f.submit (@user.new_record? ? "Sign up" : "Update") %></p>
+  <p><%= f.submit(@user.new_record? ? "Sign up" : "Update") %></p>
 <% end %>

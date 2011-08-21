@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :prepare_password
   
+  has_many :events, :dependent => :destroy
+  
+  accepts_nested_attributes_for :events, :reject_if => lambda { |a| a[:title].blank? && a[:event_date].blank? }, :allow_destroy => true
+  attr_accessible :events_attributes
+  
   has_attached_file :photo, :styles => { :icon => "40x40#", :small => "150x150>" }, #:styles      => {:icon => "50x50#", :thumb=> "100x100#", :small  => "190x190#", :large => "500x500>" },
     :url  => "/assets/user/:id/:style/:basename.:extension",
     :path => ":rails_root/public/assets/user/:id/:style/:basename.:extension",
@@ -31,6 +36,30 @@ class User < ActiveRecord::Base
     BCrypt::Engine.hash_secret(pass, password_salt)
   end
 
+  def paypal_url(return_url)
+    values = {
+      :business => 'seller_1229899173_biz@railscasts.com',
+      :cmd => '_cart',
+      :upload => 1,
+      :return => return_url,
+      :invoice => "1",
+      :amount => "200",
+      :item_name => "Donating to Ben",
+      :item_number => "1",
+      :quantity => "1"
+    }
+    
+    "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+  end
+  
+  def self.search(search)
+    if search
+      where('name LIKE ? OR email LIKE ? OR artist_name LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%")
+    else
+      scoped
+    end
+  end
+  
   private
 
   def prepare_password
@@ -39,4 +68,5 @@ class User < ActiveRecord::Base
       self.password_hash = encrypt_password(password)
     end
   end
+  
 end
