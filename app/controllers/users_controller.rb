@@ -63,12 +63,12 @@ class UsersController < ApplicationController
       :business => @user.paypal_email,
       :item_name => "Donating to " + username(@user),
       :currency_code => "USD",
-      :amount => amount_to_donate_to_artist,
+      :amount => amount,
       :upload => 1,
       :return => user_url(@user)
     }
   	  
-    redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+    redirect_to "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
     
   end
   
