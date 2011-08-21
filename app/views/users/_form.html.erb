@@ -1,43 +1,60 @@
 <%= form_for @user, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-  <% if @user.new_record? %>
-  
-  <p>
-    <%= f.label "Username" %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label "Email" %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  
+  <% if @user.user_type == 'Patron' %>
+   <%= f.hidden_field :user_type %>
+     <% if @user.new_record? %>
+      <p>
+        <%= f.label "Email" %><br />
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+      </p>
+      <p>
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %>
+      </p>
+    <% end %> 
+    <p>
+      <%= f.label "Full Name" %><br />
+      <%= f.text_field :name %>
+    </p>
+   
   <% else %>
-  
   <p>
-    <%= f.file_field :photo %>
+   GET FED!
+  </p>
+  <p>
+    <%= (@user.new_record? ? "CREATE YOUR PROFILE" : "UPDATE YOUR PROFILE") %>
+  </p>
+  <% if @user.new_record? %>
+    <p>
+      <%= f.label "Email" %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </p>
+  <% end %>
+  <p>
+    Photo: <%= f.file_field :photo %>
   </p>
   <p>
     <%= f.label "Arts Type" %><br />
-    <%= f.text_field :arts_type %>
-  </p>
-  <p>
-    <%= f.label "Individual or Group" %><br />
-    <%= f.select :ind_group, ['Individual', 'Group'] %>
+    <%= f.select :arts_type, ['Music', 'Art', 'Drama', 'Dance', 'Other'] %>
   </p>
   <p>
     <%= f.label "Name" %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label "Artist Name" %><br />
+    <%= f.label "Stage Name" %><br />
     <%= f.text_field :artist_name %>
   </p>
   <p>
@@ -49,16 +66,28 @@
     <%= f.text_field :web_site %>
   </p>
   <p>
-    <%= f.label "Facebook" %><br />
+    <%= f.label "Facebook" %><span class="small_instruction">(URL or Username)</span><br />
     <%= f.text_field :facebook %>
   </p>
   <p>
-    <%= f.label "Twitter" %><br />
+    <%= f.label "Twitter" %><span class="small_instruction">(URL or Username)</span><br />
     <%= f.text_field :twitter %>
   </p>
   <p>
-    <%= f.label "YouTube" %><br />
+    <%= f.label "YouTube" %><span class="small_instruction">(URL or Username)</span><br />
     <%= f.text_field :youTube %>
+  </p>
+  <p>
+    <%= f.label "Zip Code" %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label "Do you teach your art?" %><br />
+    <%= f.radio_button :teacher, "true" %>Yes <%= f.radio_button :teacher, "false" %>No
+  </p>
+  <p>
+    <%= f.label "User Type" %><br />
+    <%= f.select :user_type, ['Artist', 'Patron', 'Both'] %>
   </p>
   
   <% end %>

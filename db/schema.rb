@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110820171641) do
+ActiveRecord::Schema.define(:version => 20110821013219) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(:version => 20110820171641) do
     t.string   "facebook"
     t.string   "twitter"
     t.string   "youTube"
+    t.string   "user_type"
+    t.string   "zip"
+    t.boolean  "teacher"
   end
 
 end

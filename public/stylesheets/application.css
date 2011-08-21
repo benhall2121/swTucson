@@ -1,5 +1,5 @@
 body {
-  background-color: #4B7399;
+  background-color: green;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -74,15 +74,116 @@ a {
   margin: 0;
 }
 
-.enter_div{
-  text-align:right;	
-}
-
-
 
 img{
  border:none;	
 }
+
+
+/******************************  Header Show  ******************************/
+
+.header{
+ overflow:auto;		
+}
+
+.logo{
+ float:left;
+}
+
+.enter_div{
+ margin-left:300px; /* The margin left needs to be the same as the width of the logo */	
+ height:165px; /* Height should be the same as the height of the logo */
+  text-align:right;	
+}
+
+.header_top div{	
+ display:inline-block;
+}
+
+div.supportTheArts{
+ text-align:left;	
+ width:85%;
+ font-family: 'Short Stack', cursive;
+ font-style:italic;
+ font-weight:bold;
+ font-size:48px;
+ padding:10px 0 20px 0;
+}
+
+.loginout{
+ vertical-align:top;	
+}
+
+.nav{
+  border-top:1px solid gray;
+  border-bottom:1px solid gray;
+  text-align:left;
+  margin-top:10px;
+}
+
+.nav div{
+ display: inline-block;	
+ margin:5px 0 5px 20px;
+}
+
+/******************************  End Header Show  ******************************/
+
+
+
+/******************************  Home  ******************************/
+
+.patron_artist_login_wrapper{	
+ margin-right:auto;
+ margin-left:auto;
+}
+
+.patron_artist_login_wrapper div{
+  font-size:12px;
+  vertical-align:top;	
+  align:center;
+}
+
+.why_patron_div, .why_artists_div{
+  display:inline-block;
+  width:19%;
+}
+
+.patron_div, .artist_div{
+  display:inline-block;
+  width:26%;
+  text-align:left;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div.patron_header, div.artist_header{
+  font-size:18px;
+  font-weight:bold;
+}
+
+div.artist_join_us{
+  text-align:center;
+  padding-top:3px;
+  padding-bottom:3px;
+  font-size:18px;
+}
+
+.patron_learn_more, .artist_learn_more{
+  text-align:right;
+}
+
+
+
+/******************************  End Home  ******************************/
+
+
+
+/******************************  Users Show  ******************************/
+
 
 img.profile{
  border: 1px solid #999;
@@ -95,8 +196,6 @@ img.profile:hover{
  padding:3px;
 }
 
-
-/******************************  Users Show  ******************************/
 .user_left_column{
 	width:155px;
 	display:inline-block;

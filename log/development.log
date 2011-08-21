@@ -1959,3 +1959,2590 @@ Started GET "/" for 127.0.0.1 at Sat Aug 20 13:33:33 -0700 2011
   Processing by SessionsController#new as HTML
 Rendered sessions/new.html.erb within layouts/application (31.3ms)
 Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 14:20:54 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered users/_user_show_left_column.html.erb (63.9ms)
+Rendered users/show.html.erb within layouts/application (108.2ms)
+Completed 200 OK in 4411ms (Views: 119.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:19:08 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:21:00 -0700 2011
+
+AbstractController::ActionNotFound (The action 'home ' could not be found for UsersController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:21:46 -0700 2011
+
+AbstractController::ActionNotFound (The action 'home ' could not be found for UsersController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:22:02 -0700 2011
+
+AbstractController::ActionNotFound (The action 'home ' could not be found for UsersController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:22:27 -0700 2011
+
+AbstractController::ActionNotFound (The action 'home ' could not be found for UsersController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:22:47 -0700 2011
+
+AbstractController::ActionNotFound (The action 'home ' could not be found for UsersController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 15:23:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sat Aug 20 15:30:35 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Aug 20 15:30:40 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[36mSQL (23.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 464ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:30:40 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (2.9ms)
+Rendered users/_user_show_left_column.html.erb (90.8ms)
+Rendered users/show.html.erb within layouts/application (142.9ms)
+Completed 200 OK in 4206ms (Views: 153.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Aug 20 15:30:49 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (192.4ms)
+Rendered users/edit.html.erb within layouts/application (206.2ms)
+Completed 200 OK in 254ms (Views: 217.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:31:16 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.1ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (16.3ms)
+Rendered users/show.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 4281ms (Views: 72.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:31:39 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (66.9ms)
+Rendered users/show.html.erb within layouts/application (111.4ms)
+Completed 200 OK in 4245ms (Views: 121.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:39:28 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (15.7ms)
+Rendered users/show.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 4137ms (Views: 71.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:41:23 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (15.0ms)
+Rendered users/show.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 4210ms (Views: 70.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:44:24 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.3ms)
+Rendered shared/_more_contact_info.html.erb (1.6ms)
+Rendered users/_user_show_left_column.html.erb (17.7ms)
+Rendered users/show.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 4240ms (Views: 77.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:50:54 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 4214ms (Views: 71.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:51:34 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (21.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.9ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (15.7ms)
+Rendered users/show.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 4540ms (Views: 72.4ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:53:47 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.7ms)
+Rendered users/show.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 4194ms (Views: 70.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:54:54 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 4213ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:55:17 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.9ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.7ms)
+Rendered users/show.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 4211ms (Views: 71.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:57:34 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.1ms)
+Rendered users/show.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 4140ms (Views: 71.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 15:57:55 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (15.5ms)
+Rendered users/show.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 4093ms (Views: 70.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:01:42 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (15.5ms)
+Rendered users/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 4102ms (Views: 68.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:02:08 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 4225ms (Views: 68.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:03:28 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.2ms)
+Rendered users/show.html.erb within layouts/application (58.4ms)
+Completed 200 OK in 4234ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:04:00 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 4245ms (Views: 69.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:04:39 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.9ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (15.9ms)
+Rendered users/show.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 4295ms (Views: 70.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:04:52 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.6ms)
+Rendered users/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 4215ms (Views: 69.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:06:21 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.0ms)
+Rendered users/show.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 4265ms (Views: 70.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:06:40 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 4087ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:06:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 4129ms (Views: 68.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 16:09:12 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:09:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:10:05 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:10:18 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:10:45 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:10:57 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:12:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:13:09 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:13:29 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:13:56 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:14:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:14:44 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:15:00 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:15:26 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:15:41 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:15:51 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:15:59 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:17:35 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:19:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:19:27 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:19:57 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:20:09 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:20:44 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:21:27 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 115ms (Views: 114.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:23:14 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:23:39 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:24:04 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:25:51 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:28:04 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:30:33 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:30:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:31:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:31:26 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:31:43 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:32:13 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:32:59 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:33:11 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:33:37 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:35:10 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:37:32 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:37:55 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:38:54 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:39:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:39:23 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:40:22 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:41:46 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:42:12 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:42:54 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:44:46 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:47:12 -0700 2011
+  Processing by UsersController#home as HTML
+ERROR: compiling _app_views_layouts_application_html_erb___651337622_18517000_0 RAISED compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:40: unknown regexp options - dv
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+        </div>
+         ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:43: unknown regexp options - dv
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+       ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:45: syntax error, unexpected kDO_BLOCK, expecting kEND
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+                      ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:45: syntax error, unexpected '|', expecting '='
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+                                  ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:54: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_layouts_application_html_erb___651337622_18517000_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feed The Artist</title>
+    <!-- Fonts -->
+    <link href=\'http://fonts.googleapis.com/css?family=Short+Stack\' rel=\'stylesheet\' type=\'text/css\'>
+    
+    ');@output_buffer.append= ( stylesheet_link_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    
+    ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( yield(:head) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </head>
+  <body>
+  
+    <div id="container">
+      <div class="header">
+        <div class="logo">
+          ');@output_buffer.append= ( image_tag("logo30.png") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+     
+        <div class="enter_div">
+          <div class="header_top">
+            <div class="supportTheArts">
+              Support the Arts!
+            </div>
+          
+            <div class="loginout">
+');             if current_user 
+@output_buffer.safe_concat('               ');@output_buffer.append= ( link_to "Log out", logout_path );@output_buffer.safe_concat('
+');             else 
+@output_buffer.safe_concat('              ');@output_buffer.append= ( link_to "Log In", login_path );@output_buffer.safe_concat('
+');             end 
+@output_buffer.safe_concat('            </div>
+          </div>
+          
+          <div class="nav">
+            <div>SEARCH FOR ARTISTS</div>
+            <div>');@output_buffer.append=  link_to "ABOUT US", about_us_path</div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( content_tag :div, msg, :id => "flash_#{name}" );@output_buffer.safe_concat('
+');       end 
+@output_buffer.safe_concat('      ');@output_buffer.append= ( content_tag :h1, yield(:title) if show_title? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+  </body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:54:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__516519628__callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/chunked.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:67:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:38:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/home.html.erb within layouts/application (42.7ms)
+Completed   in 56ms
+
+ActionView::Template::Error (compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:40: unknown regexp options - dv
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+        </div>
+         ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:43: unknown regexp options - dv
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+       ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:45: syntax error, unexpected kDO_BLOCK, expecting kEND
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+                      ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:45: syntax error, unexpected '|', expecting '='
+      <% flash.each do |name, msg| @output_buffer.safe_concat('
+                                  ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/layouts/application.html.erb:54: syntax error, unexpected kENSURE, expecting $end):
+    37:           <div class="nav">
+    38:             <div>SEARCH FOR ARTISTS</div>
+    39:             <div><%= link_to "ABOUT US", about_us_path</div>
+    40:           </div>
+    41:           
+    42:         </div>
+    43:       </div>
+  app/views/layouts/application.html.erb:54:in `compile'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (100.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (132.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:47:30 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about_us" for 127.0.0.1 at Sat Aug 20 16:47:33 -0700 2011
+  Processing by UsersController#about_us as HTML
+Rendered users/about_us.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about_us" for 127.0.0.1 at Sat Aug 20 16:47:55 -0700 2011
+  Processing by UsersController#about_us as HTML
+Rendered users/about_us.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:47:57 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:48:55 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:48:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sat Aug 20 16:48:59 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Aug 20 16:49:05 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 249ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:49:05 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.3ms)
+Rendered users/show.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 4212ms (Views: 72.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:49:11 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed   in 37ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"users"}):
+  app/controllers/users_controller.rb:43:in `home'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:49:30 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.3ms)
+Rendered users/_user_show_left_column.html.erb (15.2ms)
+Rendered users/show.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 4231ms (Views: 70.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:49:36 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 91ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:49:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (4.0ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.9ms)
+Rendered users/show.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 4170ms (Views: 71.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Aug 20 16:49:43 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (191.7ms)
+Rendered users/edit.html.erb within layouts/application (207.4ms)
+Completed 200 OK in 253ms (Views: 218.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:49:46 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 172ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:49:46 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.2ms)
+Rendered users/show.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 4168ms (Views: 72.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about_us" for 127.0.0.1 at Sat Aug 20 16:49:52 -0700 2011
+  Processing by UsersController#about_us as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/about_us.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:49:54 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 81ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 16:49:54 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (4.2ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.0ms)
+Rendered users/show.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 4395ms (Views: 71.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 16:50:37 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:50:37 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:54:15 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:54:54 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:55:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:55:35 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:55:46 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:56:01 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 113ms (Views: 112.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:56:14 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:56:45 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:56:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:57:19 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:57:39 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:57:55 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:58:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 16:58:59 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:00:54 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:01:16 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:02:10 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:03:21 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:03:44 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 103ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:03:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:04:07 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:04:17 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:04:30 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:04:58 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:05:10 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:05:30 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:06:00 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:07:21 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sat Aug 20 17:08:27 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Aug 20 17:08:32 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 249ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 17:08:33 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (65.1ms)
+Rendered users/show.html.erb within layouts/application (111.6ms)
+Completed 200 OK in 4216ms (Views: 122.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 17:10:39 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.2ms)
+Rendered shared/_more_contact_info.html.erb (2.2ms)
+Rendered users/_user_show_left_column.html.erb (18.6ms)
+Rendered users/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 4180ms (Views: 79.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:10:46 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 185ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 17:10:46 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.5ms)
+Rendered users/show.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 4168ms (Views: 71.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 17:10:51 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:10:51 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:20:17 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about_us" for 127.0.0.1 at Sat Aug 20 17:20:28 -0700 2011
+  Processing by UsersController#about_us as HTML
+Rendered users/about_us.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:20:31 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sat Aug 20 17:20:33 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Aug 20 17:20:38 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"benhall2121"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'benhall2121' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 339ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 17:20:39 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.6ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.4ms)
+Rendered users/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 4113ms (Views: 71.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Aug 20 17:20:47 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.7ms)
+Rendered shared/_more_contact_info.html.erb (1.4ms)
+Rendered users/_user_show_left_column.html.erb (15.9ms)
+Rendered users/show.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 4181ms (Views: 72.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 17:20:53 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:20:53 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:21:48 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:22:16 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:22:32 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:25:01 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:26:36 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:26:48 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:36:52 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:37:52 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:38:10 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:39:11 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:40:20 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:48:28 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:49:10 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (98.4ms)
+Completed 200 OK in 110ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:49:19 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:49:49 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:50:11 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:50:31 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:51:11 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:52:47 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:53:17 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:53:49 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:54:11 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:54:28 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:54:48 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:54:57 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:55:18 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 17:55:50 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:04:48 -0700 2011
+  Processing by UsersController#home as HTML
+ERROR: compiling _app_views_users_home_html_erb___549713730_19600690_0 RAISED compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/home.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._to "Learn More" new_user_path(params[:user_type] => 'patron...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/home.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._to "Learn More" new_user_path(params[:user_type] => 'artist...
+                              ^
+Function body:           def _app_views_users_home_html_erb___549713730_19600690_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/home";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<div class="patron_artist_login_wrapper">
+ <div class="why_patron_div">
+   Support Your Local Art Scene
+   <ul>
+     <li>Passion for the arts</li>
+     <li>Easy way to support your favorite artists</li>
+     <li>More personalized up to date and in-depth info</li>
+   </ul>
+ </div>
+ <div class="patron_div">
+   <div class="patron_header">BE A PATRON</div>
+   <div class="artist_join_us">&nbsp</div>
+   <div class="patron_learn_more">');@output_buffer.append= ( link_to "Learn More" new_user_path(params[:user_type] => 'patron') );@output_buffer.safe_concat('</div>
+ </div>
+ <div class="artist_div">
+   <div class="artist_header">ARTISTS</div>
+   <div class="artist_join_us">JOIN US!</div>
+   <div class="artist_learn_more">');@output_buffer.append= ( link_to "Learn More" new_user_path(params[:user_type] => 'artist') );@output_buffer.safe_concat('</div>
+ </div>
+ <div class="why_artists_div">
+   Why Artists should join
+   <ul>
+     <li>Connecting you to new patrons</li>
+     <li>new revenue stream</li>
+     <li>exposure</li>
+   </ul>
+ </div>
+</div>
+
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Ben/desktop/work/sidework/swTucson/app/views/users/home.html.erb:35:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__516519628__callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/chunked.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:67:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:38:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/home.html.erb within layouts/application (1.7ms)
+Completed   in 13ms
+
+ActionView::Template::Error (compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/home.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._to "Learn More" new_user_path(params[:user_type] => 'patron...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/home.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._to "Learn More" new_user_path(params[:user_type] => 'artist...
+                              ^):
+    11:  <div class="patron_div">
+    12:    <div class="patron_header">BE A PATRON</div>
+    13:    <div class="artist_join_us">&nbsp</div>
+    14:    <div class="patron_learn_more"><%= link_to "Learn More" new_user_path(params[:user_type] => 'patron') %></div>
+    15:  </div>
+    16:  <div class="artist_div">
+    17:    <div class="artist_header">ARTISTS</div>
+  app/views/users/home.html.erb:35:in `compile'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (55.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:05:04 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?=patron" for 127.0.0.1 at Sat Aug 20 18:05:07 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (78.3ms)
+Rendered users/new.html.erb within layouts/application (178.8ms)
+Completed 200 OK in 319ms (Views: 205.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?=patron" for 127.0.0.1 at Sat Aug 20 18:08:13 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (145.1ms)
+Rendered users/new.html.erb within layouts/application (162.8ms)
+Completed 200 OK in 207ms (Views: 173.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?=patron" for 127.0.0.1 at Sat Aug 20 18:09:37 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (162.5ms)
+Rendered users/new.html.erb within layouts/application (181.6ms)
+Completed 200 OK in 228ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?=patron" for 127.0.0.1 at Sat Aug 20 18:10:24 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (164.3ms)
+Rendered users/new.html.erb within layouts/application (182.6ms)
+Completed 200 OK in 228ms (Views: 193.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:10:43 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (13.1ms)
+Completed   in 25ms
+
+ActionView::Template::Error (undefined local variable or method `param' for #<#<Class:0x2573328>:0x25720f4>):
+    11:  <div class="patron_div">
+    12:    <div class="patron_header">BE A PATRON</div>
+    13:    <div class="artist_join_us">&nbsp</div>
+    14:    <div class="patron_learn_more"><%= link_to "Learn More", new_user_path(param[:user_type] => 'patron') %></div>
+    15:  </div>
+    16:  <div class="artist_div">
+    17:    <div class="artist_header">ARTISTS</div>
+  app/views/users/home.html.erb:14:in `_app_views_users_home_html_erb___549713730_19629890_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (121.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (134.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:10:53 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?=patron" for 127.0.0.1 at Sat Aug 20 18:10:56 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (127.7ms)
+Rendered users/new.html.erb within layouts/application (144.2ms)
+Completed 200 OK in 189ms (Views: 154.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:10:59 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:11:36 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:12:41 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=patron" for 127.0.0.1 at Sat Aug 20 18:12:43 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"patron"}
+Rendered users/_form.html.erb (132.0ms)
+Rendered users/new.html.erb within layouts/application (150.1ms)
+Completed 200 OK in 197ms (Views: 161.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:12:55 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:12:56 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:12:58 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (155.7ms)
+Rendered users/new.html.erb within layouts/application (173.8ms)
+Completed 200 OK in 237ms (Views: 184.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:14:12 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (159.7ms)
+Rendered users/new.html.erb within layouts/application (165.1ms)
+Completed   in 212ms
+
+ActionView::Template::Error (undefined method `user_type' for #<User:0x2512d48>):
+    3:   User Type:: <%= params[:user_type] %>
+    4:   <% if @user.new_record? %>
+    5:    <% if params[:user_type] == 'Patron' %>
+    6:    <%= f.hidden_field :user_type %>
+    7:     <p>
+    8:       <%= f.label "Email" %><br />
+    9:       <%= f.text_field :email %>
+  app/views/users/_form.html.erb:6:in `_app_views_users__form_html_erb__155955450_19395530_452576'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__155955450_19395530_452576'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___45265580_19415170_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.9ms)
+  [1m[36mSQL (33.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110819165907)
+Migrating to AddColumnsToUsers (20110820052146)
+Migrating to AddAttachmentPhotoToUser (20110820052323)
+Migrating to AddMoreColumnsToUsers (20110820171641)
+Migrating to AddUserTypeToUsers (20110821011344)
+  [1m[35mSQL (146.2ms)[0m  ALTER TABLE `users` ADD `user_type` varchar(255)
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110821011344')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:14:29 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (139.3ms)
+Rendered users/new.html.erb within layouts/application (156.3ms)
+Completed 200 OK in 206ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:14:40 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (183.9ms)
+Rendered users/new.html.erb within layouts/application (201.9ms)
+Completed 200 OK in 249ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:14:48 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (175.1ms)
+Rendered users/new.html.erb within layouts/application (192.1ms)
+Completed 200 OK in 236ms (Views: 202.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:16:34 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:16:36 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 127ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:16:37 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+WARNING: Can't mass-assign protected attributes: user_type
+Rendered users/_form.html.erb (190.4ms)
+Rendered users/new.html.erb within layouts/application (209.5ms)
+Completed 200 OK in 263ms (Views: 221.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 20 18:17:06 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "user"=>{"name"=>"ccc", "password_confirmation"=>"[FILTERED]", "user_type"=>"", "password"=>"[FILTERED]", "email"=>"c@yahoo.com"}}
+WARNING: Can't mass-assign protected attributes: user_type
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'c@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (9.8ms)
+Rendered users/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 163ms (Views: 35.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:18:19 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+WARNING: Can't mass-assign protected attributes: user_type
+Rendered users/_form.html.erb (76.6ms)
+Rendered users/new.html.erb within layouts/application (93.8ms)
+Completed 200 OK in 219ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:18:22 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+WARNING: Can't mass-assign protected attributes: user_type
+Rendered users/_form.html.erb (151.2ms)
+Rendered users/new.html.erb within layouts/application (168.0ms)
+Completed 200 OK in 213ms (Views: 179.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 20 18:18:51 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "user"=>{"name"=>"cccc", "password_confirmation"=>"[FILTERED]", "user_type"=>"", "password"=>"[FILTERED]", "email"=>"c@yahoo.com"}}
+WARNING: Can't mass-assign protected attributes: user_type
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'c@yahoo.com') LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `users` (`twitter`, `username`, `band`, `facebook`, `name`, `password_hash`, `arts_type`, `photo_content_type`, `photo_file_name`, `created_at`, `photo_file_size`, `bio`, `photo_updated_at`, `web_site`, `password_salt`, `updated_at`, `fname`, `user_type`, `ind_group`, `email`, `youTube`, `artist_name`, `lname`) VALUES (NULL, NULL, NULL, NULL, 'cccc', '$2a$10$mN3Ps8oeDgOxP4xXm8RYCeopGyt4BcnBlaKNk3l3GVqVmzc3OmENK', NULL, NULL, NULL, '2011-08-21 01:18:51', NULL, NULL, NULL, NULL, '$2a$10$mN3Ps8oeDgOxP4xXm8RYCe', '2011-08-21 01:18:51', NULL, NULL, NULL, 'c@yahoo.com', NULL, NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (20.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 474ms
+
+
+Started GET "/users/4" for 127.0.0.1 at Sat Aug 20 18:18:51 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (2.8ms)
+Rendered shared/_more_contact_info.html.erb (1.9ms)
+Rendered users/_user_show_left_column.html.erb (37.2ms)
+Rendered users/show.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 4224ms (Views: 96.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 18:20:00 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:20:00 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:20:02 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (20.4ms)
+Rendered users/new.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 119ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 20 18:20:12 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "user"=>{"name"=>"ddd", "password_confirmation"=>"[FILTERED]", "user_type"=>"Patron", "password"=>"[FILTERED]", "email"=>"d@yahoo.com"}}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'd@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`facebook`, `updated_at`, `username`, `photo_content_type`, `youTube`, `ind_group`, `twitter`, `web_site`, `band`, `created_at`, `email`, `password_salt`, `user_type`, `artist_name`, `name`, `bio`, `photo_file_name`, `photo_file_size`, `fname`, `photo_updated_at`, `lname`, `password_hash`, `arts_type`) VALUES (NULL, '2011-08-21 01:20:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2011-08-21 01:20:12', 'd@yahoo.com', '$2a$10$0aRtfYAP2TTRRYcNuKZjSu', 'Patron', NULL, 'ddd', NULL, NULL, NULL, NULL, NULL, NULL, '$2a$10$0aRtfYAP2TTRRYcNuKZjSuHul/DKrMvJI7Dfr5qzSQEC/nLYCi0Pe', NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 283ms
+
+
+Started GET "/users/5" for 127.0.0.1 at Sat Aug 20 18:20:12 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered shared/_social_sites.html.erb (1.3ms)
+Rendered shared/_more_contact_info.html.erb (1.2ms)
+Rendered users/_user_show_left_column.html.erb (12.1ms)
+Rendered users/show.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 4207ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 18:25:27 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:25:28 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:25:30 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (45.2ms)
+Rendered users/new.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 141ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:25:54 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (42.4ms)
+Rendered users/new.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 232ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (24.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110819165907)
+Migrating to AddColumnsToUsers (20110820052146)
+Migrating to AddAttachmentPhotoToUser (20110820052323)
+Migrating to AddMoreColumnsToUsers (20110820171641)
+Migrating to AddUserTypeToUsers (20110821011344)
+Migrating to AddZipTeachToUsers (20110821013219)
+  [1m[35mSQL (134.6ms)[0m  ALTER TABLE `users` ADD `zip` varchar(255)
+  [1m[36mSQL (323.5ms)[0m  [1mALTER TABLE `users` ADD `teacher` bool[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110821013219')
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (5.9ms)[0m  describe `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:35:50 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+ERROR: compiling _app_views_users__form_html_erb__155955450_18281370_452576 RAISED compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/_form.html.erb:84: syntax error, unexpected tSTRING_BEG, expecting ')'
+...d= ( f.radio_button :teacher "true" );@output_buffer.append=...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/_form.html.erb:84: syntax error, unexpected tSTRING_BEG, expecting ')'
+...d= ( f.radio_button :teacher "false" );@output_buffer.safe_c...
+                              ^
+Function body:           def _app_views_users__form_html_erb__155955450_18281370_452576(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for @user, :html => { :multipart => true } do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.error_messages );@output_buffer.safe_concat('
+');   if params[:user_type] == 'Patron' 
+@output_buffer.safe_concat('   ');@output_buffer.append= ( f.hidden_field :user_type );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <p>
+      ');@output_buffer.append= ( f.label "Email" );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+    <p>
+      ');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+    <p>
+      ');@output_buffer.append= ( f.label :password_confirmation );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+    <p>
+      ');@output_buffer.append= ( f.label "Full Name" );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+   
+');   else 
+@output_buffer.safe_concat('  <p>
+   GET FED!
+  </p>
+  <p>
+    ');@output_buffer.append= ( (@user.new_record? ? "CREATE YOUR PROFILE" : "UPDATE YOUR PROFILE") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+');   if @user.new_record? 
+@output_buffer.safe_concat('    <p>
+      ');@output_buffer.append= ( f.label "Email" );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+    <p>
+      ');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+    <p>
+      ');@output_buffer.append= ( f.label :password_confirmation );@output_buffer.safe_concat('<br />
+      ');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </p>
+');   end 
+@output_buffer.safe_concat('  <p>
+    Photo: ');@output_buffer.append= ( f.file_field :photo );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Arts Type" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.select :arts_type, ['Music', 'Art', 'Drama', 'Dance', 'Other'] );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Name" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Stage Name" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :artist_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Bio" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_area :bio );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Website" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :web_site );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Facebook" );@output_buffer.safe_concat('<span class="small_instruction">(URL or Username)</span><br />
+    ');@output_buffer.append= ( f.text_field :facebook );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Twitter" );@output_buffer.safe_concat('<span class="small_instruction">(URL or Username)</span><br />
+    ');@output_buffer.append= ( f.text_field :twitter );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "YouTube" );@output_buffer.safe_concat('<span class="small_instruction">(URL or Username)</span><br />
+    ');@output_buffer.append= ( f.text_field :youTube );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Zip Code" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :zip );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label "Do you teach your art?" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.radio_button :teacher "true" );@output_buffer.append= ( f.radio_button :teacher "false" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  
+');   end 
+@output_buffer.safe_concat('  
+  <p>');@output_buffer.append= ( f.submit (@user.new_record? ? "Sign up" : "Update") );@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Ben/desktop/work/sidework/swTucson/app/views/users/_form.html.erb:94:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:333:in `render_partial'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:262:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:260:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:378:in `_render_partial'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:31:in `render'
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___45265580_18285760_0'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:135:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:135:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__434435962__process_action__943997142__callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/chunked.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:67:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:38:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/_form.html.erb (5.2ms)
+Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed   in 97ms
+
+ActionView::Template::Error (compile error
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/_form.html.erb:84: syntax error, unexpected tSTRING_BEG, expecting ')'
+...d= ( f.radio_button :teacher "true" );@output_buffer.append=...
+                              ^
+/Users/Ben/desktop/work/sidework/swTucson/app/views/users/_form.html.erb:84: syntax error, unexpected tSTRING_BEG, expecting ')'
+...d= ( f.radio_button :teacher "false" );@output_buffer.safe_c...
+                              ^):
+    81:   </p>
+    82:   <p>
+    83:     <%= f.label "Do you teach your art?" %><br />
+    84:     <%= f.radio_button :teacher "true" %><%= f.radio_button :teacher "false" %>
+    85:   </p>
+    86:   
+    87:   <% end %>
+  app/views/users/_form.html.erb:94:in `compile'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___45265580_18285760_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.2ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:36:03 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (50.6ms)
+Rendered users/new.html.erb within layouts/application (66.5ms)
+Completed 200 OK in 154ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:36:40 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (139.2ms)
+Rendered users/new.html.erb within layouts/application (143.8ms)
+Completed   in 225ms
+
+ActionView::Template::Error (undefined method `merge' for "Yes":String):
+    81:   </p>
+    82:   <p>
+    83:     <%= f.label "Do you teach your art?" %><br />
+    84:     <%= f.radio_button :teacher, 1, "Yes" %><%= f.radio_button :teacher, "false" %>
+    85:   </p>
+    86:   
+    87:   <% end %>
+  app/views/users/_form.html.erb:84:in `_app_views_users__form_html_erb__155955450_18177480_452576'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__155955450_18177480_452576'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___45265580_18181860_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.9ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:36:53 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (46.7ms)
+Rendered users/new.html.erb within layouts/application (50.9ms)
+Completed   in 141ms
+
+ActionView::Template::Error (undefined method `merge' for "Yes":String):
+    81:   </p>
+    82:   <p>
+    83:     <%= f.label "Do you teach your art?" %><br />
+    84:     <%= f.radio_button :teacher, "true", "Yes" %><%= f.radio_button :teacher, "false" %>
+    85:   </p>
+    86:   
+    87:   <% end %>
+  app/views/users/_form.html.erb:84:in `_app_views_users__form_html_erb__155955450_18071090_452576'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__155955450_18071090_452576'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___45265580_18078470_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (124.5ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:37:26 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (47.4ms)
+Rendered users/new.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 154ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 20 18:37:32 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "user"=>{"name"=>"", "zip"=>"", "password_confirmation"=>"[FILTERED]", "artist_name"=>"", "teacher"=>"true", "youTube"=>"", "web_site"=>"", "bio"=>"", "facebook"=>"", "password"=>"[FILTERED]", "arts_type"=>"Music", "email"=>"", "twitter"=>""}}
+WARNING: Can't mass-assign protected attributes: zip, teacher
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (51.5ms)
+Rendered users/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 258ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 20 18:38:27 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x242afac @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0066.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110820-25083-np9oex-0>, @content_type="image/jpeg", @original_filename="IMG_0066.JPG">, "name"=>"Ben Hall", "zip"=>"85295", "password_confirmation"=>"[FILTERED]", "artist_name"=>"Benerino", "teacher"=>"true", "youTube"=>"benhall2121", "web_site"=>"http://www.benerino.com", "bio"=>"Yeah", "facebook"=>"benhall2121", "password"=>"[FILTERED]", "arts_type"=>"Other", "email"=>"be@yahoo.com", "twitter"=>"benhall2121"}}
+WARNING: Can't mass-assign protected attributes: zip, teacher
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'be@yahoo.com') LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`arts_type`, `photo_file_size`, `updated_at`, `band`, `photo_file_name`, `photo_updated_at`, `facebook`, `username`, `artist_name`, `password_salt`, `ind_group`, `fname`, `bio`, `lname`, `password_hash`, `youTube`, `photo_content_type`, `teacher`, `zip`, `name`, `email`, `twitter`, `web_site`, `user_type`, `created_at`) VALUES ('Other', 162128, '2011-08-21 01:38:28', NULL, 'IMG_0066.JPG', '2011-08-21 01:38:27', 'benhall2121', NULL, 'Benerino', '$2a$10$lFk.9eIryOkOYsbqTTIrie', NULL, NULL, 'Yeah', NULL, '$2a$10$lFk.9eIryOkOYsbqTTIrieKApFkSDHWrJBSJ7ud.1vvYOA7lg5l0S', 'benhall2121', 'image/jpeg', NULL, NULL, 'Ben Hall', 'be@yahoo.com', 'benhall2121', 'http://www.benerino.com', NULL, '2011-08-21 01:38:28')
+[paperclip] Saving attachments.
+[paperclip] saving /Users/Ben/desktop/work/sidework/swTucson/public/assets/user/6/icon/IMG_0066.JPG
+[paperclip] saving /Users/Ben/desktop/work/sidework/swTucson/public/assets/user/6/original/IMG_0066.JPG
+[paperclip] saving /Users/Ben/desktop/work/sidework/swTucson/public/assets/user/6/small/IMG_0066.JPG
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 1830ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sat Aug 20 18:38:28 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.0ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (17.7ms)
+Rendered users/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 4315ms (Views: 74.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at Sat Aug 20 18:40:38 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.0ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.6ms)
+Rendered users/show.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 4269ms (Views: 74.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:40:45 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_form.html.erb (224.3ms)
+Rendered users/edit.html.erb within layouts/application (242.6ms)
+Completed 200 OK in 298ms (Views: 256.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/6" for 127.0.0.1 at Sat Aug 20 18:40:52 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"6", "user"=>{"name"=>"Ben Hall", "zip"=>"", "artist_name"=>"Benerino", "teacher"=>"true", "youTube"=>"benhall2121", "user_type"=>"Artist", "web_site"=>"http://www.benerino.com", "bio"=>"Yeah", "facebook"=>"benhall2121", "arts_type"=>"Other", "twitter"=>"benhall2121"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'be@yahoo.com') AND (`users`.id <> 6) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `users` SET `user_type` = 'Artist', `teacher` = 1, `updated_at` = '2011-08-21 01:40:53', `zip` = '' WHERE `users`.`id` = 6
+[paperclip] Saving attachments.
+  [1m[36mSQL (32.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 237ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sat Aug 20 18:40:53 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.2ms)
+Rendered users/show.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 4419ms (Views: 244.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:41:00 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_form.html.erb (223.0ms)
+Rendered users/edit.html.erb within layouts/application (241.0ms)
+Completed 200 OK in 286ms (Views: 251.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/6" for 127.0.0.1 at Sat Aug 20 18:41:11 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "id"=>"6", "user"=>{"name"=>"Ben Hall", "zip"=>"85295", "artist_name"=>"Benerino", "teacher"=>"true", "youTube"=>"benhall2121", "user_type"=>"Patron", "web_site"=>"http://www.benerino.com", "bio"=>"Yeah", "facebook"=>"benhall2121", "arts_type"=>"Other", "twitter"=>"benhall2121"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'be@yahoo.com') AND (`users`.id <> 6) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `users` SET `user_type` = 'Patron', `updated_at` = '2011-08-21 01:41:11', `zip` = '85295' WHERE `users`.`id` = 6
+[paperclip] Saving attachments.
+  [1m[36mSQL (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 207ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sat Aug 20 18:41:11 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (4.0ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.4ms)
+Rendered users/show.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 4267ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 18:43:25 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:43:25 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sat Aug 20 18:43:50 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Aug 20 18:43:59 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"v1AAJAifajgppjJTsS+liay1oON9SF60txYA7U0umKc=", "utf8"=>"✓", "password"=>"[FILTERED]", "login"=>"be@yahoo.com"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'be@yahoo.com' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'be@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 258ms
+
+
+Started GET "/users/6" for 127.0.0.1 at Sat Aug 20 18:43:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered shared/_social_sites.html.erb (3.8ms)
+Rendered shared/_more_contact_info.html.erb (1.5ms)
+Rendered users/_user_show_left_column.html.erb (16.8ms)
+Rendered users/show.html.erb within layouts/application (154.5ms)
+Completed 200 OK in 4238ms (Views: 164.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:44:08 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_form.html.erb (187.5ms)
+Rendered users/edit.html.erb within layouts/application (203.3ms)
+Completed 200 OK in 248ms (Views: 213.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:48:01 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered users/_form.html.erb (199.1ms)
+Rendered users/edit.html.erb within layouts/application (215.1ms)
+Completed 200 OK in 262ms (Views: 227.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:50:34 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_form.html.erb (177.8ms)
+Rendered users/edit.html.erb within layouts/application (193.9ms)
+Completed 200 OK in 342ms (Views: 205.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:51:10 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+Rendered users/_form.html.erb (185.1ms)
+Rendered users/edit.html.erb within layouts/application (201.0ms)
+Completed 200 OK in 246ms (Views: 211.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at Sat Aug 20 18:51:24 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+Rendered users/_form.html.erb (199.6ms)
+Rendered users/edit.html.erb within layouts/application (215.3ms)
+Completed 200 OK in 262ms (Views: 226.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sat Aug 20 18:51:40 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:51:40 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=Patron" for 127.0.0.1 at Sat Aug 20 18:51:42 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"Patron"}
+Rendered users/_form.html.erb (23.3ms)
+Rendered users/new.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 122ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:51:45 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:51:47 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (49.6ms)
+Rendered users/new.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 294ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about_us" for 127.0.0.1 at Sat Aug 20 18:51:52 -0700 2011
+  Processing by UsersController#about_us as HTML
+Rendered users/about_us.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 20 18:51:55 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?user_type=artist" for 127.0.0.1 at Sat Aug 20 18:52:12 -0700 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"user_type"=>"artist"}
+Rendered users/_form.html.erb (48.2ms)
+Rendered users/new.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 235ms (Views: 72.3ms | ActiveRecord: 0.0ms)
